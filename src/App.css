@@ -1,33 +1,146 @@
+
+body {
+    margin: 20px;
+    /* background: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-31735.jpg); */
+    background: url(https://jooinn.com/images/black-rock-background-2.jpg);
+    color: rgb(184, 184, 184);
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2em; 
+    padding:0; 
+    margin:10;
+}
+
+
+h1 {
+  text-align: center;
+  color:rgb(185, 164, 131);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: rgb(49, 91, 182);
+}
+
+a:visited {
+  color: rgb(49, 91, 182);
+}
+
+hr { width:100%; height:1px; background: #fff }
+
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+    position: absolute;
+    bottom: 0;
 }
+
+.maintitle {
+  text-shadow: 4px 4px rgb(0, 0, 0);
+
+  margin-top: -40px;  
+  margin-bottom: 0;
+  font-size: 80px;
+}
+
+.tagline {
+  font-size: 17px;
+  margin-top: 7px;
+}
+
+.grand {
+  margin-top: 20px;
+  margin-left: -250px;
+
+  color: rgb(73, 112, 128);
+
+}
+
+.please-log {
+  margin: 0;
+}
+
+/* ----SKILLSELECT----------------------------------------------------------------------------------------------- */
+
+.skillform {
+  margin-top: 50px;
+}
+
+.skillinput {
+  font-size: 15px;
+  
+  width: 200px;
+  height: 20px;
+}
+
+.hourselect {
+  font-size: 15px;
+  
+  width: 75px;
+  height: 25px;
+}
+.skillsubmit {
+  
+  font-size: 15px;
+  
+  width: 75px;
+  height: 25px;
+  margin-top: 120px;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+
+ /* ----LogIn Screen/ Welcome Page----------------------------------------------------------------------------------- */
+
+
+.logform {
+  margin-top: 50px;
+}
+
+
+.logname {
+  margin: 20px;
+  font-size: 15px;
+  
+  width: 200px;
+  height: 15px;
+}
+
+.logpass {
+  font-size: 15px;
+  
+  width: 200px;
+  height: 15px;
+}
+
+.logsubmit {
+  
+  font-size: 15px;
+  
+  width: 75px;
+  height: 30px;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+ /* -------------------------------------------------------------------------------------------------------------- */
