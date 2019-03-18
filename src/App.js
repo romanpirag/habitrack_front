@@ -15,9 +15,9 @@ class App extends React.Component {
           <>
             <header className="app-header">
               <div>
-                <Link to={"/"}>
+                <Link to={"mainpage"}>
                   <h5 className="grand">the Grand</h5>
-                  <h1 className="maintitle">Habitary</h1>
+                  <h1 className="maintitle">Habitrack</h1>
                 </Link>
                   <h4 className="tagline">Journal Of Exceptional Practices</h4>
               </div>
@@ -25,7 +25,7 @@ class App extends React.Component {
             <main>
               <Switch>
                 <Route exact path="/mainpage" component={MainPage} />
-                <Route exact path="/" component={WelcomePage} />
+                <Route exact path="/" component={Login} />
                 <Route exact path="/skillselect" component={SkillSelect} />        
                 <Route exact path="/login" component={Login} />        
                 <Route exact path="/register" component={Register} />        

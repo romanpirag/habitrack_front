@@ -1,10 +1,13 @@
 import React from "react"
+import { Link } from "react-router-dom" 
+import SkillSelect from "./SkillSelect"
 
 class MainPage extends React.Component {
-  state = {}
+  state = {
+    user: ""
+  }
 
   getDays = userId => {
-
     fetch(`http://localhost:3000/api/v1/users/${userId}/days`, {
       headers: {
         "Content-Type": "application/json",
@@ -13,16 +16,12 @@ class MainPage extends React.Component {
       }
     })
       .then(res => {
-        console.log(res)
         if (res.ok) {
           return res.json()
         }
         throw new Error("Can't get days.", res)
       })
-      .then(data => {
-        console.log(data)
-      })
-    
+      .then(data => {})
   }
 
   componentDidMount() {
@@ -34,24 +33,31 @@ class MainPage extends React.Component {
       }
     })
       .then(res => {
-        console.log(res)
         if (res.ok) {
           return res.json()
         }
         throw new Error("Not logged in...", res)
       })
       .then(data => {
-          console.log('profile', data)
         this.getDays(data.user.id) // user id??
+        this.setState({
+          user: data.user.username
+        })
       })
       .catch(e => {
-        console.log("Oh noes")
-          this.props.history.push("/login")
+        this.props.history.push("/login")
       })
   }
 
   render() {
-    return <h1>Main Habitary Page</h1>
+      return (
+          <>
+        <h2 className="welcomename">{this.state.user}</h2>
+        <h2 className="isloggedin">logged in</h2>
+        <Link to={"/skillselect"}><button className="skillbutton">SELECT SKILL</button></Link>
+        {/* <SkillSelect/> */}
+      </>
+    )
   }
 }
 

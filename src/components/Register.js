@@ -33,31 +33,34 @@ class Register extends Component {
       .then(res => res.json())
       .then(data => {
         localStorage.setItem("jwt", data.jwt)
+        this.props.history.push("/mainpage")
       })
   }
 
   render() {
     return (
       <>
-        <h4 className="create-text">REGISTER</h4>
-        <form onSubmit={this.handleSubmit}>
+            <form className="logform" onSubmit={this.handleSubmit}>
+        <h4 className="regtitle">REGISTER</h4>
           <input
-            className="create-form"
+            className="logname"
             type="text"
             placeholder="Username"
             name="usernameValue"
             value={this.state.usernameValue}
             onChange={this.handleInputChange}
           />
+          <br/>
           <input
-            className="create-form"
+            className="logpass"
             type="password"
             name="passwordValue"
             value={this.state.bioValue}
             placeholder="Password"
             onChange={this.handleInputChange}
           />
-          <input className="submit" type="submit" value="submit" />
+          <br/>
+          <input className="logsubmit" type="submit" value="submit" />
         </form>
       </>
     )
