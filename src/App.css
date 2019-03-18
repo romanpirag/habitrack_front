@@ -1,12 +1,11 @@
 
 body {
     margin: 20px;
-    /* background: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-31735.jpg); */
     background: url(https://jooinn.com/images/black-rock-background-2.jpg);
     color: rgb(184, 184, 184);
 
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.2em; 
+    font-size: 1.4em; 
     padding:0; 
     margin:10;
 }
@@ -43,6 +42,8 @@ hr { width:100%; height:1px; background: #fff }
 .footer {
     position: absolute;
     bottom: 0;
+
+    font-size: 15px;
 }
 
 .maintitle {
@@ -60,15 +61,12 @@ hr { width:100%; height:1px; background: #fff }
 
 .grand {
   margin-top: 20px;
-  margin-left: -250px;
+  margin-left: -235px;
 
   color: rgb(73, 112, 128);
 
 }
 
-.please-log {
-  margin: 0;
-}
 
 /* ----SKILLSELECT----------------------------------------------------------------------------------------------- */
 
@@ -90,6 +88,7 @@ hr { width:100%; height:1px; background: #fff }
   height: 25px;
 }
 .skillsubmit {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   
   font-size: 15px;
   
@@ -104,10 +103,28 @@ hr { width:100%; height:1px; background: #fff }
  /* ----LogIn Screen/ Welcome Page----------------------------------------------------------------------------------- */
 
 
-.logform {
-  margin-top: 50px;
+.logtitle {
+  font-size: 40px;
+
+  margin-top: 150px;
+  margin-bottom: -8px;
+
+  color: rgb(74, 111, 126);
+
+}
+.regtitle {
+  font-size: 30px;
+
+  margin-top: 150px;
+  margin-bottom: -8px;
+
+  color: rgb(78, 129, 104);
+
 }
 
+.logform {
+  margin-top: -100px;
+}
 
 .logname {
   margin: 20px;
@@ -125,20 +142,57 @@ hr { width:100%; height:1px; background: #fff }
 }
 
 .logsubmit {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   
   font-size: 15px;
   
   width: 75px;
   height: 30px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 
+.signup {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
+  font-size: 15px;
+  
+  width: 100px;
+  height: 30px;
+  margin-top: 50px;
+}
 
+.welcomename {
+  color: rgb(212, 212, 212);
+  font-size: 20px;
 
+  text-align: left;
 
+  margin-top: -160px;
 
+}
+.isloggedin {
+  color: rgb(110, 110, 110);
+  font-size: 15px;
+
+  text-align: left;
+
+  margin-top: -17px;
+
+}
+
+.skillbutton {
+
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 150px;
+
+  width: 300px;
+  height: 30px;
+
+  font-size: 15px;
+
+  cursor: pointer
+}
 
 
 
