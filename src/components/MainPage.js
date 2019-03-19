@@ -3,8 +3,11 @@ import { Link } from "react-router-dom"
 import SkillSelect from "./SkillSelect"
 
 class MainPage extends React.Component {
-  state = {
-    user: ""
+  state = {}
+
+  getUser = (userObj) => {
+    this.props.setUser(userObj)
+
   }
 
   getDays = userId => {
@@ -40,9 +43,7 @@ class MainPage extends React.Component {
       })
       .then(data => {
         this.getDays(data.user.id) // user id??
-        this.setState({
-          user: data.user.username
-        })
+        this.getUser(data.user)
       })
       .catch(e => {
         this.props.history.push("/login")
@@ -53,7 +54,6 @@ class MainPage extends React.Component {
       return (
           <>
         <h2 className="welcomename">{this.state.user}</h2>
-        <h2 className="isloggedin">logged in</h2>
         <Link to={"/skillselect"}><button className="skillbutton">SELECT SKILL</button></Link>
         {/* <SkillSelect/> */}
       </>

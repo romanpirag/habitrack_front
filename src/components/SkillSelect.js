@@ -1,27 +1,47 @@
 import React from "react"
+import Skillform from "./Skillform"
+import Routine from "./Routine"
+import SkillList from "./SkillList"
 
 class SkillSelect extends React.Component {
-  state = {}
+  state = {
+    skills: []
+  }
+
+  getSkillsData = () => {
+    fetch(`http://localhost:3000/api/v1/skills`, {
+      // fetch(`http://localhost:3000/api/v1/user/${this.props.user.id}/skills`, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: `Bearer: ${localStorage.getItem("jwt")}`
+      }
+    })
+      .then(res => res.json())
+      .then(skills => this.setState({ skills }))
+  }
+  componentDidMount() {
+    console.log("USER", this.props.user)
+    if (this.props.user.id) {
+      this.getSkillsData()
+    }
+  }
+  componentDidUpdate(prevProps) {
+    console.log("didupdate", prevProps)
+    // Typical usage (don't forget to compare props):
+    if (this.props.user.id !== prevProps.user.id) {
+      this.getSkillsData()
+    }
+  }
+
   render() {
     return (
-        <>
-         <form className="skillform">
-         <h3>Enter a Skill:</h3>
-            <input className="skillinput" type="text" placeholder="SKILL"/>
-          <h3>Hours Daily:</h3>
-          <select className="hourselect">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-          <br/>
-          <button className="skillsubmit" type="submit">Submit</button>
-         </form>  
-        </>      
-        )
+      <>
+        <Skillform />
+        <SkillList skills={this.state.skills} />
+        <Routine />
+      </>
+    )
   }
 }
 
