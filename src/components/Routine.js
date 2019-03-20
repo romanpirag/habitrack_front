@@ -32,10 +32,9 @@ class Routine extends React.Component {
     return (
       <>
         <form className="skillform" onSubmit={this.handleSubmit}>
-          {/* <h3>Enter a Skill:</h3>
-                    <input className="skillinput" type="text" placeholder="SKILL" /> */}
+      */}
           <br />
-          <button className="skillsubmit" type="submit">
+          <button className="create-routine" type="submit">
             CREATE ROUTINE
           </button>
         </form>

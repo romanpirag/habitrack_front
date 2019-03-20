@@ -56,6 +56,7 @@ class Login extends Component {
     })
       .then(res => {
         if (!res.ok) {
+          console.log("Batman")
           throw Error("Not logged in...", res.statusText)
         } else {
           return res.json()
@@ -66,6 +67,12 @@ class Login extends Component {
         localStorage.setItem("jwt", data.jwt)
         this.props.history.push("/mainpage")
       })
+      .catch(err => {
+        alert("Invalid Login")
+        this.setState(
+          this.defaultState
+        )
+      })
   }
 
   render() {
@@ -74,7 +81,7 @@ class Login extends Component {
         <form className="logform" onSubmit={this.handleSubmit}>
           <h4 className="logtitle">Login</h4>
           <input
-            className="logname"
+            id="logname"
             type="text"
             placeholder="Username"
             name="usernameValue"
@@ -84,10 +91,10 @@ class Login extends Component {
           />
           <br />
           <input
-            className="logpass"
+            id="logpass"
             type="password"
             name="passwordValue"
-            value={this.state.bioValue}
+            value={this.state.passwordValue}
             placeholder="Password"
             onChange={this.handleInputChange}
             required

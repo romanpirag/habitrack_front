@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom" 
+import { Link, withRouter } from "react-router-dom" 
 import SkillSelect from "./SkillSelect"
 
 class MainPage extends React.Component {
@@ -52,13 +52,29 @@ class MainPage extends React.Component {
 
   render() {
       return (
-          <>
-        <h2 className="welcomename">{this.state.user}</h2>
-        <Link to={"/skillselect"}><button className="skillbutton">SELECT SKILL</button></Link>
-        {/* <SkillSelect/> */}
-      </>
-    )
+        <div className=" clear">
+          {/* <h2 className="welcomename">{this.state.user}</h2> */}
+          <Link to={"/skillselect"}>
+            <button className="skillbutton">ADD ROUTINE</button>
+          </Link>
+          <div className="skilldiv  ">
+            <h3 className="skillform-titles">YOUR DAILY ROUTINES</h3>
+          </div>
+          <div className="skilldiv ">
+            <h3 className="days">DAY 1</h3>
+          </div>
+          <div className="skilldiv ">
+            <h3 className="days">DAY 2</h3>
+          </div>
+          <div className="skilldiv ">
+            <h3 className="days">DAY 3</h3>
+          </div>
+          <div className="skilldiv ">
+            <h3 className="days">DAY 4</h3>
+          </div>
+        </div>
+      )
   }
 }
 
-export default MainPage
+export default withRouter(MainPage)

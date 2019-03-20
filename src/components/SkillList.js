@@ -7,9 +7,8 @@ class SkillList extends React.Component {
     mappedSkills = () => {
         console.log(this.props)
        return this.props.skills.map(skill => 
-           <h4 key={skill.id}>{skill.name}</h4>
+           <h4 key={skill.id}>{skill.name} <span className="target">Target: {skill.target}</span> </h4>
         )
-
     }
 
 
@@ -19,9 +18,14 @@ class SkillList extends React.Component {
         }
 
         return (
-            <>
-            {this.mappedSkills()}
-            </>
+          <div>
+            <div className="skilldiv">
+                <h3 className="skillform-titles2">YOUR DAILY ROUTINE</h3>
+            </div>
+            <div className="skilldiv">
+                <h5 className="yourskills">{this.mappedSkills()}</h5>
+            </div>
+          </div>
         )
     }
 }

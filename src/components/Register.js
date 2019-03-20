@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom"
 
 class Register extends Component {
   defaultState = {
@@ -40,27 +41,31 @@ class Register extends Component {
   render() {
     return (
       <>
-            <form className="logform" onSubmit={this.handleSubmit}>
-        <h4 className="regtitle">REGISTER</h4>
+        <form className="logform" onSubmit={this.handleSubmit}>
+          <h4 className="regtitle">SIGN UP!</h4>
           <input
-            className="logname"
+            id="logname"
             type="text"
             placeholder="Username"
             name="usernameValue"
             value={this.state.usernameValue}
             onChange={this.handleInputChange}
           />
-          <br/>
+          <br />
           <input
-            className="logpass"
+            id="logpass"
             type="password"
             name="passwordValue"
             value={this.state.bioValue}
             placeholder="Password"
             onChange={this.handleInputChange}
           />
-          <br/>
+          <br />
           <input className="logsubmit" type="submit" value="submit" />
+          <br/>
+          <Link to={"/login"}>
+            <button className="signup">Back</button>
+          </Link>
         </form>
       </>
     )

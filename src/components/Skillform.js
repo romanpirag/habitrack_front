@@ -8,25 +8,24 @@ class Skillform extends React.Component {
 
     render() { 
         return (  
-        <>
+            <div>
         <form className="skillform" onSubmit={this.handleSubmit}>
-            <h3>Enter a Skill:</h3>
-            <input className="skillinput" type="text" placeholder="SKILL" />
-            <h3>Hours Daily:</h3>
-            <select className="hourselect">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+            <div className="skilldiv">
+                <h3 className="skillform-titles">Enter a Skill:</h3>
+            </div>
+                <input className="skillinput" type="text" placeholder="SKILL" />
+            <div className="skilldiv">
+                <h3 className="skillform-titles" >Target Hours Daily:</h3>
+            </div>
+            <div className="numarrows">
+            <input type="number" className="hourselect" min="0" max="24" placeholder="0"/>
+            </div>
             <br />
             <button className="skillsubmit" type="submit">
-            ADD SKILL
+            ADD
             </button>
                 </form>
-            </>
+        </div>
         );
     }
 }

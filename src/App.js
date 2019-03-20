@@ -1,5 +1,11 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  withRouter
+} from "react-router-dom"
 import "./App.css"
 import MainPage from "./components/MainPage"
 import SkillSelect from "./components/SkillSelect"
@@ -9,6 +15,14 @@ import Register from "./components/Register"
 class App extends React.Component {
   state = {
     user: {}
+  }
+
+  logout = () => {
+    localStorage.clear()
+    this.setState({
+      user: {}
+    })
+    this.props.history.push("/login")
   }
 
   componentDidMount() {
@@ -27,7 +41,7 @@ class App extends React.Component {
         throw new Error("Not logged in...", res)
       })
       .then(data => {
-       this.setState({user: data.user})
+        this.setState({ user: data.user })
       })
       .catch(e => {
         console.log("Oh noes")
@@ -41,46 +55,49 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Router>
-          <>
-            <header className="app-header">
-              <h3 className="welcomename">{this.state.user.username}</h3>
-              <h2 className="isloggedin">logged in</h2>
-              <div>
-                <Link to={"mainpage"}>
-                  <h5 className="grand" />
-                  <h1 className="maintitle">Habitrack</h1>
-                </Link>
-                <h4 className="tagline">
-                  Journal Of Exceptional Practices
-                </h4>
-              </div>
-            </header>
-            <main>
-              <Switch>
-                <Route
-                  exact
-                  path="/mainpage"
-                  render={props => <MainPage setUser={this.setUser} />}
-                />
-                <Route exact path="/" component={Login} />
-                <Route
-                  exact
-                  path="/skillselect"
-                  render={props => <SkillSelect user={this.state.user} />}
-                />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/register" component={Register} />
-              </Switch>
-            </main>
-            <footer className="footer">
-              &copy; ROMA all rights reserved 2019
-            </footer>
-          </>
-        </Router>
+        <header className="app-header">
+          <h3 className="welcomename">{this.state.user.username}</h3>
+          <h2 onClick={this.logout} className="isloggedin">
+            log out
+          </h2>
+          <div>
+            {/* <img
+              className="topimage"
+              alt="Nothing"
+              src="https://i.imgur.com/ihd0kCI.jpg"
+            /> */}
+            <br />
+            <Link to={"mainpage"}>
+              <span className="maintitle">Habi</span>
+              <span className="maintitle2">track</span>
+            </Link>
+            <h5 className="tagline">Journal Of Exceptional Practices</h5>
+          </div>
+        </header>
+        <main>
+          <Switch>
+            <Route
+              exact
+              path="/mainpage"
+              render={props => <MainPage setUser={this.setUser} />}
+            />
+            <Route exact path="/" component={Login} />
+            <Route
+              exact
+              path="/skillselect"
+              render={props => <SkillSelect user={this.state.user} />}
+            />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+          </Switch>
+          
+        </main>
+        <footer className="footer">
+          {/* <p>&copy; ROMA all rights reserved 2019</p> */}
+        </footer>
       </div>
     )
   }
 }
 
-export default App
+export default withRouter(App)

@@ -1,19 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Karla");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700");
+
+
+
+
 
 body {
-    margin: 20px;
-    background: url(https://jooinn.com/images/black-rock-background-2.jpg);
-    color: rgb(184, 184, 184);
+   /* border-style: solid; */
+  /* border-width: 2px; */
+  border-radius: 25px;
+  background: url(https://jooinn.com/images/black-rock-background-2.jpg);
+  /* background: url(https://cdn.shopify.com/s/files/1/2930/2308/products/old-master-black-with-center-warm-gray-texture-backdrop_250cfb6d-a278-4efd-a4df-d99231ec08cd_1024x1024@2x.jpg?v=1535698605); */
+  color: rgb(0, 0, 0);
 
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.4em; 
-    padding:0; 
-    margin:10;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.3em;
+  padding: 0;
+  margin: 10px;
+
+  min-height: 100vh;
+  display: block;
+  position: relative;
 }
 
+/* ::-webkit-input-placeholder {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 30px;
+}
+::-moz-placeholder {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 30px;
+}
+:-ms-input-placeholder {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 30px;
+}
+:-moz-placeholder {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 30px;
+} */
 
 h1 {
   text-align: center;
-  color:rgb(185, 164, 131);
+  color: rgb(185, 164, 131);
+}
+
+.topimage {
+  width: 100%;
 }
 
 a {
@@ -28,8 +67,11 @@ a:visited {
   color: rgb(49, 91, 182);
 }
 
-hr { width:100%; height:1px; background: #fff }
-
+hr {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
 
 .App {
   text-align: center;
@@ -40,166 +82,357 @@ hr { width:100%; height:1px; background: #fff }
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
+  color: white;
+  position: fixed;
 
-    font-size: 15px;
+  bottom: 0;
+  width: 100%;
+  height: -100px;
+
+  font-size: 15px;
+  text-align: left;
 }
 
 .maintitle {
-  text-shadow: 0px 7px rgb(0, 0, 0);
+  font-size: 170px;
 
-  margin-top: -40px;  
+  color: rgb(255, 107, 21);
+  /* text-shadow: 0px 8px rgb(0, 0, 0); */
+
+}
+
+.maintitle2 {
+  font-size: 160px;
+
+  color: rgb(77, 156, 209);
+  text-shadow: 10px 8px rgb(0, 0, 0);
+
+  margin-top: -40px;
   margin-bottom: 0;
-  font-size: 80px;
 }
 
 .tagline {
-  text-shadow: 0px 10px rgb(0, 0, 0);
+  color: rgb(230, 230, 230);
+  /* text-shadow: 0px 3px rgb(0, 0, 0); */
 
-  font-size: 17px;
-  margin-top: 7px;
+  font-size: 37px;
+  margin-top: -21px;
 }
 
-.grand {
-  margin-top: 20px;
-  margin-left: -235px;
-
-  color: rgb(73, 112, 128);
-
+#circle {
+  font-size: 60px;
 }
 
 
 /* ----SKILLSELECT----------------------------------------------------------------------------------------------- */
 
+.skillbutton {
+  box-shadow: 5px 10px;
+  cursor: pointer;
+  
+  border-radius: 25px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  
+  font-size: 50px;
+  
+  width: 200px;
+  height: 70px;
+
+  margin-bottom: 35px;
+}
+
 .skillform {
   margin-top: 50px;
 }
 
+
 .skillinput {
-  font-size: 15px;
+  box-shadow: 5px 10px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  
+  border-radius: 25px;
+  margin: 20px;
+  font-size: 38px;
   
   width: 200px;
-  height: 20px;
+  height: 38px;
+  
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .hourselect {
-  font-size: 15px;
+  box-shadow: 5px 10px;
+  cursor: pointer;
   
-  width: 75px;
-  height: 25px;
+  border-radius: 25px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  
+  font-size: 50px;
+  
+  width: 120px;
+  height: px;
+  margin-top: 20px;
+  
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .skillsubmit {
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-shadow: 5px 5px;
+  cursor: pointer;
   
-  font-size: 15px;
   
-  width: 75px;
-  height: 25px;
-  margin-top: 120px;
-
+  border-radius: 25px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
   
+  font-size: 50px;
+  
+  width: 120px;
+  height: 70px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
+.skillform-titles {
+  color: rgb(233, 98, 98);
 
-/* -------------------------------------------------------------------------------------------------------------- */
+  font-size: 50px;
+  margin: 0;
+}
+.skillform-titles2 {
+  color: rgb(100, 197, 88);
 
- /* ----LogIn Screen/ Welcome Page----------------------------------------------------------------------------------- */
+  font-size: 50px;
+  margin: 0;
+}
 
+.clear {
+  clear: both;
+
+}
+
+.skilldiv {
+  float: center;
+  width: 25%;
+  color: rgb(0, 0, 0);
+  
+  margin-top: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  margin-left: 38%;
+
+}
+
+.yourskills {
+  color: white;
+
+  font-size: 30px;
+  margin-top: -10px;
+}
 
 .logtitle {
-  font-size: 40px;
+  font-size: 80px;
 
   margin-top: 150px;
   margin-bottom: -8px;
 
-  color: rgb(74, 111, 126);
-
+  color: rgb(65, 194, 162);
 }
 .regtitle {
-  font-size: 30px;
+  font-size: 80px;
 
   margin-top: 150px;
   margin-bottom: -8px;
 
-  color: rgb(78, 129, 104);
-
+  color: rgb(65, 194, 162);
 }
 
 .logform {
   margin-top: -100px;
 }
 
-.logname {
-  margin: 20px;
-  font-size: 15px;
-  
-  width: 200px;
-  height: 15px;
-}
+#logname,
+#logpass {
+  box-shadow: 5px 10px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
 
-.logpass {
-  font-size: 15px;
-  
+  border-radius: 25px;
+  margin: 20px;
+  font-size: 38px;
+
   width: 200px;
-  height: 15px;
+  height: 38px;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .logsubmit {
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
-  font-size: 15px;
-  
-  width: 75px;
-  height: 30px;
+  box-shadow: 5px 10px;
+  cursor: pointer;
+
+  border-radius: 25px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+
+  font-size: 50px;
+
+  width: 120px;
+  height: 70px;
   margin-top: 20px;
 }
 
-
 .signup {
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-shadow: 0px 5px;
+  cursor: pointer;
 
-  font-size: 15px;
-  
-  width: 100px;
-  height: 30px;
-  margin-top: 50px;
+  border-radius: 25px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+
+  font-size: 50px;
+  color: rgb(50, 92, 131);
+
+  width: 120px;
+  height: 70px;
+  margin-top: 20px;
+  margin-bottom: 70px;
 }
+
+.days {
+  font-size: 60px;
+   color: rgb(54, 54, 54);
+
+}
+
+.target {
+  color: rgb(255, 210, 128);
+
+}
+/* ----------------------------------------------LOGIN NAME TOP LEFT */
+
 
 .welcomename {
+  position: fixed;
+  margin-top: 20px;
   text-shadow: 1px 6px rgb(0, 0, 0);
 
-  color: rgb(255, 133, 77);
-  font-size: 20px;
+  color: rgb(211, 182, 138);
+  font-size: 50px;
 
   text-align: left;
-
-
+  margin-left: 15px;
 }
 .isloggedin {
+  cursor: pointer;
+  position: fixed;
   color: rgb(110, 110, 110);
-  font-size: 15px;
+  font-size: 50px;
 
   text-align: left;
 
-  margin-top: -17px;
-
+  margin-top: 60px;
+  margin-left: 15px;
 }
 
-.skillbutton {
+/* ---------------------------------------------------------------------- */
 
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-top: 150px;
+.create-routine {
+  /* color: rgb(37, 58, 90); */
+  box-shadow: 10px 10px;
+  cursor: pointer;
+
+  border-radius: 25px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+
+  font-size: 50px;
 
   width: 300px;
-  height: 30px;
+  height: 70px;
+  margin-top: -100px;
+  margin-bottom: 70px;
+}
 
-  font-size: 15px;
+/* -------------------------------------------------------------------------------------------------------------- */
 
-  cursor: pointer
+.numarrows {
+ 
+
+}
+
+.maintitle { 
+  animation: wiggle 1000ms infinite;
+  animation-timing-function: linear;  
+  
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 4s infinite linear;
+}
+
+
+/* h3:hover { 
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;    
+} */
+h2:hover { 
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;   
+}
+h4 { 
+  animation: pulse 1.5s infinite;
+  animation-timing-function: linear;   
+}
+
+span:hover { 
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;   
+}
+
+button:hover { 
+  animation: pulse 1.5s infinite;
+  animation-timing-function: linear;   
+}
+input:hover { 
+  animation: pulse 1.5s infinite;
+  animation-timing-function: linear;   
+}
+
+
+/* ------------------------------------------ */
+
+
+@keyframes wiggle {
+  0% { transform: translate(2px, 0); }
+  50% { transform: translate(-2px, 0); }
+  100% { transform: translate(2px, 0); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1)}
+  100% { transform: scale(1)}
+}
+
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
 
 
 
 
- /* -------------------------------------------------------------------------------------------------------------- */
+
