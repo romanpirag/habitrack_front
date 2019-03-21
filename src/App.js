@@ -1,6 +1,5 @@
 import React from "react"
 import {
-  BrowserRouter as Router,
   Route,
   Switch,
   Link,
@@ -34,7 +33,7 @@ class App extends React.Component {
       }
     })
       .then(res => {
-        console.log(res)
+        // console.log(res)
         if (res.ok) {
           return res.json()
         }
@@ -47,11 +46,11 @@ class App extends React.Component {
         console.log("Oh noes")
       })
   }
-  setUser = user => {
-    this.setState({
-      user
-    })
-  }
+  // setUser = user => {
+  //   this.setState({
+  //     user
+  //   })
+  // }
   render() {
     return (
       <div className="App">
@@ -79,7 +78,7 @@ class App extends React.Component {
             <Route
               exact
               path="/mainpage"
-              render={props => <MainPage setUser={this.setUser} />}
+              render={props => <MainPage user={this.state.user} />}
             />
             <Route exact path="/" component={Login} />
             <Route

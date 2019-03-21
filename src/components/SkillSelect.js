@@ -8,6 +8,12 @@ class SkillSelect extends React.Component {
     skills: []
   }
 
+  updateSkills = (skill) => {
+    this.setState({
+      skills: [...this.state.skills, skill]
+    })
+  }
+
   getSkillsData = () => {
     fetch(`http://localhost:3000/api/v1/skills`, {
       // fetch(`http://localhost:3000/api/v1/user/${this.props.user.id}/skills`, {
@@ -26,6 +32,7 @@ class SkillSelect extends React.Component {
       this.getSkillsData()
     }
   }
+  
   componentDidUpdate(prevProps) {
     console.log("didupdate", prevProps)
     // Typical usage (don't forget to compare props):
@@ -35,9 +42,12 @@ class SkillSelect extends React.Component {
   }
 
   render() {
+    if (!this.props.user.id) {
+      return null
+    }
     return (
       <>
-        <Skillform />
+        <Skillform user={this.props.user} updateSkills={this.updateSkills} />
         <SkillList skills={this.state.skills} />
         <Routine />
       </>
