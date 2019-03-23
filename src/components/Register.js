@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 
 class Register extends Component {
   defaultState = {
@@ -34,6 +34,7 @@ class Register extends Component {
       .then(res => res.json())
       .then(data => {
         localStorage.setItem("jwt", data.jwt)
+        this.props.getUser(data.user)
         this.props.history.push("/mainpage")
       })
   }
@@ -41,8 +42,9 @@ class Register extends Component {
   render() {
     return (
       <>
+          <button className="signup2 logtitle" disabled>SIGN UP!</button>
         <form className="logform" onSubmit={this.handleSubmit}>
-          <h4 className="regtitle">SIGN UP!</h4>
+          <br/>
           <input
             id="logname"
             type="text"
@@ -72,4 +74,4 @@ class Register extends Component {
   }
 }
 
-export default Register
+export default withRouter(Register)

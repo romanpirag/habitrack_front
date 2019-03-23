@@ -35,7 +35,6 @@ class SkillSelect extends React.Component {
   
   componentDidUpdate(prevProps) {
     console.log("didupdate", prevProps)
-    // Typical usage (don't forget to compare props):
     if (this.props.user.id !== prevProps.user.id) {
       this.getSkillsData()
     }

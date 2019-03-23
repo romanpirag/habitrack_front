@@ -1,55 +1,55 @@
 import React from "react"
 import { Link, withRouter } from "react-router-dom"
+import DayCard from "./DayCard"
 
 class MainPage extends React.Component {
-  state = {}
-
-  // getUser = (userObj) => {
-  //   this.props.setUser(userObj)
-
-  // }
-
-  // getDays = userId => {
-  //   fetch(`http://localhost:3000/api/v1/users/${userId}/days`, {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //       Authorization: `Bearer: ${localStorage.getItem("jwt")}`
-  //     }
-  //   })
-  //     .then(res => {
-  //       if (res.ok) {
-  //         return res.json()
-  //       }
-  //       throw new Error("Can't get days.", res)
-  //     })
-  //     .then(data => {})
-  // }
-  componentDidUpdate() {
-    console.log("mainpage did UPDate", this.props)
+  state = {
+    days: []
   }
+
   componentDidMount() {
-    console.log("mainpage didmount",this.props)
-    // fetch("http://localhost:3000/api/v1/profile", {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Accept: "application/json",
-    //     Authorization: `Bearer: ${localStorage.getItem("jwt")}`
-    //   }
-    // })
-    //   .then(res => {
-    //     if (res.ok) {
-    //       return res.json()
-    //     }
-    //     throw new Error("Not logged in...", res)
-    //   })
-    //   .then(data => {
-    //     this.getDays(data.user.id) // user id??
-    //     this.getUser(data.user)
-    //   })
-    //   .catch(e => {
-    //     this.props.history.push("/login")
-    //   })
+    if (this.props.user.id) {
+      this.getDays(this.props.user.id)
+    }
+  }
+
+  // ------------------FETCHES USERS DAYS---------------------------
+
+  getDays = userId => {
+    fetch(`http://localhost:3000/api/v1/users/${userId}/days`, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: `Bearer: ${localStorage.getItem("jwt")}` //<---Tells server who we are.
+      }
+    })
+      .then(res => {
+        if (res.ok) {
+          return res.json()
+        } //<-------Checks if res.ok (status code 200). IF NOT throw new Error.
+        throw new Error("Can't get days.", res)
+      })
+      .then(data => {
+        this.setState({
+          days: data //<-----Getting all the days and setting in state
+        })
+      })
+  }
+
+  // -----------------------------------------------------------------
+
+  componentDidUpdate(prevProps) {
+    // console.log("didUpdate",prevProps,this.props)
+    if (this.props.user.id !== prevProps.user.id) {
+      //<-----checkes if previous prop.user.id is the same as new props.user.id
+      this.getDays(this.props.user.id) //<--- Doing this so that we don't call this.getDays without a user id.
+    }
+  }
+
+  // -----------------------------------------------------------------
+
+  daysMapped = () => {
+    return this.state.days.map(day => <DayCard key={day.id} day={day} />)
   }
 
   render() {
@@ -57,25 +57,15 @@ class MainPage extends React.Component {
       return null
     }
     return (
-      <div className=" clear">
-        {/* <h2 className="welcomename">{this.state.user}</h2> */}
+      <div>
+          <h3 className="skillform-titles your-daily">YOUR DAILY ROUTINES</h3>
         <Link to={"/skillselect"}>
-          <button className="skillbutton">ADD ROUTINE</button>
+          <button className="add-routine-button">ADD ROUTINE</button>
         </Link>
-        <div className="skilldiv  ">
-          <h3 className="skillform-titles">YOUR DAILY ROUTINES</h3>
+        <div>
         </div>
-        <div className="skilldiv ">
-          <h3 className="days">DAY 1</h3>
-        </div>
-        <div className="skilldiv ">
-          <h3 className="days">DAY 2</h3>
-        </div>
-        <div className="skilldiv ">
-          <h3 className="days">DAY 3</h3>
-        </div>
-        <div className="skilldiv ">
-          <h3 className="days">DAY 4</h3>
+        <div className="days-container">
+           {this.daysMapped()}
         </div>
       </div>
     )

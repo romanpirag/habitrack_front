@@ -40,6 +40,7 @@ class Skillform extends React.Component {
 
       .then(data => {
         this.props.updateSkills(data.skill)
+          this.setState(this.defaultState)
       })
   }
 
@@ -47,7 +48,7 @@ class Skillform extends React.Component {
     return (
       <div>
         <form className="skillform" onSubmit={this.handleSubmit}>
-          <div className="skilldiv">
+          <div className="skilldiv2">
             <h3 className="skillform-titles">Enter a Skill:</h3>
           </div>
           <input
@@ -58,7 +59,7 @@ class Skillform extends React.Component {
             value={this.state.skillValue}
             placeholder="SKILL"
           />
-          <div className="skilldiv">
+          <div className="skilldiv2">
             <h3 className="skillform-titles">Target Hours Daily:</h3>
           </div>
           <div className="numarrows">

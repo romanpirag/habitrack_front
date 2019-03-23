@@ -1,10 +1,5 @@
 import React from "react"
-import {
-  Route,
-  Switch,
-  Link,
-  withRouter
-} from "react-router-dom"
+import { Route, Switch, Link, withRouter } from "react-router-dom"
 import "./App.css"
 import MainPage from "./components/MainPage"
 import SkillSelect from "./components/SkillSelect"
@@ -24,6 +19,14 @@ class App extends React.Component {
     this.props.history.push("/login")
   }
 
+  // --------------------FETCHES THE SINGLE USER-----------------
+
+  getUser = user => {
+    this.setState({
+      user
+    })
+  }
+
   componentDidMount() {
     fetch("http://localhost:3000/api/v1/profile", {
       headers: {
@@ -33,7 +36,6 @@ class App extends React.Component {
       }
     })
       .then(res => {
-        // console.log(res)
         if (res.ok) {
           return res.json()
         }
@@ -46,33 +48,37 @@ class App extends React.Component {
         console.log("Oh noes")
       })
   }
-  // setUser = user => {
-  //   this.setState({
-  //     user
-  //   })
-  // }
+
   render() {
     return (
       <div className="App">
+        <img
+          className="topimage"
+          alt="Nothing"
+          src="https://i.imgur.com/lNzL1Jw.png"
+        />
+        <img
+          className="bottimage"
+          alt="Nothing"
+          src="https://i.imgur.com/Yb4LIvq.png"
+        />
         <header className="app-header">
-          <h3 className="welcomename">{this.state.user.username}</h3>
-          <h2 onClick={this.logout} className="isloggedin">
+          <span className="welcomename">{this.state.user.username}</span>
+          <span onClick={this.logout} className="isloggedin">
             log out
-          </h2>
+          </span>
           <div>
-            {/* <img
-              className="topimage"
-              alt="Nothing"
-              src="https://i.imgur.com/ihd0kCI.jpg"
-            /> */}
-            <br />
             <Link to={"mainpage"}>
-              <span className="maintitle">Habi</span>
-              <span className="maintitle2">track</span>
+              <div className="maintitle-div">
+                {/* <span className="maintitle">Habi</span>
+                <span className="maintitle2">track</span> */}
+              </div>
             </Link>
-            <h5 className="tagline">Journal Of Exceptional Practices</h5>
+            {/* <h5 className="tagline">Journal Of Exceptional Practices</h5> */}
           </div>
         </header>
+
+        <br />
         <main>
           <Switch>
             <Route
@@ -80,18 +86,38 @@ class App extends React.Component {
               path="/mainpage"
               render={props => <MainPage user={this.state.user} />}
             />
-            <Route exact path="/" component={Login} />
+            <Route
+              exact
+              path="/"
+              render={props => (
+                <Login user={this.state.user} getUser={this.getUser} />
+              )}
+            />
             <Route
               exact
               path="/skillselect"
               render={props => <SkillSelect user={this.state.user} />}
             />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
+            <Route
+              exact
+              path="/login"
+              render={props => (
+                <Login user={this.state.user} getUser={this.getUser} />
+              )}
+            />
+            <Route
+              exact
+              path="/register"
+              render={props => (
+                <Register user={this.state.user} getUser={this.getUser} />
+              )}
+            />
           </Switch>
-          
         </main>
         <footer className="footer">
+          {/* <a className="gitlink" href="https://github.com/romabot">
+            <i class="fab fa-github-square" />
+          </a> */}
           {/* <p>&copy; ROMA all rights reserved 2019</p> */}
         </footer>
       </div>
