@@ -42,8 +42,8 @@ class Register extends Component {
   render() {
     return (
       <>
-          <button className="signup2 logtitle" disabled>SIGN UP!</button>
         <form className="logform" onSubmit={this.handleSubmit}>
+          <button className="signup2 logtitle" disabled>SIGN UP!</button>
           <br/>
           <input
             id="logname"

@@ -61,10 +61,15 @@ class Login extends Component {
   render() {
     return (
       <>
-        <button className="signup2 logtitle" disable>
-          Login
-        </button>
+        <div className="big-title">
+          <span className="maintitle3">Habi</span>
+          <span className="maintitle4">track</span>
+          <h5 className="tagline">Journal Of Exceptional Practices</h5>
+        </div>
         <form className="logform" onSubmit={this.handleSubmit}>
+          <button className="signup2 logtitle" disable>
+            Login
+          </button>
           <br />
           <input
             id="logname"

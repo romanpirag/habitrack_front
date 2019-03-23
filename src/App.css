@@ -12,7 +12,7 @@ body {
   font-size: 1.3em;
   padding: 0;
   margin: 10px;
-  margin-bottom: 7%;
+  margin-bottom: 3%;
 
   min-height: 100vh;
   display: block;
@@ -25,6 +25,7 @@ h1 {
 }
 
 .topimage {
+  box-shadow: 5px 5px 10px rgb(0, 0, 0);
   z-index: 1;
   margin-bottom: -20;
   width: 105%;
@@ -35,6 +36,7 @@ h1 {
   right: 0;
 }
 .bottimage {
+  box-shadow: -5px -5px 10px rgb(0, 0, 0);
   z-index: 1;
   margin-bottom: -20;
   width: 105%;
@@ -101,32 +103,65 @@ hr {
 }
 
 .maintitle {
-  font-size: 230px;
   color: rgb(255, 107, 21);
   animation: shake 1000ms infinite;
   animation-timing-function: linear; 
-}
+  font-weight: 700;
 
-.maintitle2 {
-  font-size: 200px;
-  color: rgb(77, 156, 209);
-  text-shadow: 10px 8px rgb(0, 0, 0);
+  z-index: 2;
+  position: fixed;
 
-  margin-top: -50px;
-  margin-bottom: 0;
-  cursor: pointer;
-}
 
-.maintitle { 
-  animation: wiggle 1000ms infinite;
-  animation-timing-function: linear;  
-  
+  text-align: left;
+  margin-left: -48%;
+  margin-top: -5.3%;
+  font-weight: bold;
+  font-size: 240%;
+
   color: #f35626;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 4s infinite linear;
-   cursor: pointer;
+}
+
+.maintitle2 {
+  color: rgb(77, 156, 209);
+  
+  margin-top: -50px;
+  margin-bottom: 0;
+  font-weight: 700;
+  
+  z-index: 2;
+  position: fixed;
+  margin-top: 20px;
+  
+  text-align: left;
+  margin-left: -44%;
+  margin-top: -4.9%;
+  font-weight: bold;
+  font-size: 220%;
+}
+
+.maintitle3 {
+  color: rgb(255, 107, 21);
+  font-size: 900%;
+
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 4s infinite linear;
+}
+
+.maintitle4 {
+  color: rgb(77, 156, 209);
+  font-size: 850%;
+}
+
+.big-title {
+  margin-bottom: -2%;
+  margin-top: -3%;
 }
 
 .maintitle-div {
@@ -136,9 +171,9 @@ hr {
 .tagline {
   cursor: default;
   color: rgb(230, 230, 230);
-  font-size: 50px;
+  font-size: 190%;
   margin-top: -21px;
-  margin-bottom: 10px;
+  margin-bottom: 2%;
 
   animation: shake 1000ms infinite;
   animation-timing-function: linear; 
@@ -166,23 +201,28 @@ hr {
 }
 
 .add-routine-button {
-  box-shadow: 5px 10px;
+  /* box-shadow: 5px 10px; */
   cursor: pointer;
+
+  border-radius: 15px;
   
-  font-size: 50px;
-  border-radius: 25px;
+  width: 105px;
+  height: 37px;
+  
+  z-index: 2;
+  position: fixed;
+  margin-top: 20px;
+  
+  text-align: left;
+  margin-left: 9%;
+  margin-top: -4.2%;
+  font-size: 120%;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
-  
-  width: 200px;
-  height: 70px;
-
-  margin-top: 25px;
-  margin-bottom: 20px;
 }
 
 .skillform {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .skillinput {
@@ -295,8 +335,8 @@ hr {
   height: 100%;
   justify-content: space-evenly;  
 
-  cursor: pointer;
-  margin-bottom: -300px;
+  margin-top: -2%;
+  
 }
 
 
@@ -336,17 +376,50 @@ hr {
 }
 
 .your-daily {
-  transform: rotate(-deg);
+  z-index: 2;
+  position: fixed;
+  margin-top: 20px;
 
-  margin-bottom: -1%;
-  font-size: 500%;
+  color: rgb(0, 225, 255);
+
+  text-align: left;
+  margin-left: 40%;
+  margin-top: -4.7%;
+  font-weight: bold;
+  font-size: 200%;
+}
+.your-daily2 {
+  z-index: 2;
+  position: fixed;
+  margin-top: 20px;
+
+  color: rgb(0, 225, 255);
+
+  text-align: left;
+  margin-left: 40%;
+  margin-top: -7.4%;
+  font-weight: bold;
+  font-size: 200%;
+}
+
+.your-daily:hover {
+  /* ----Fast ScaleBox--- */
+  transform: scale(1.1);
+  transition: all ease 100ms;
+  /* background: rgb(0, 0, 0); */
+  /* box-shadow: 0 0 25px #000; */
+  text-align: center; 
+  /* display: block; */
+  color: rgb(0, 247, 255);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .logform {
-  margin-top: -30px;
+  margin-top: 0%;
 }
 
 #logname,
@@ -395,11 +468,11 @@ hr {
   width: 120px;
   height: 70px;
   margin-top: 20px;
-  margin-bottom: 70px;
   background: black;
   border: 2px solid rgb(41, 255, 209);
   cursor: pointer;
 }
+
 .signup2 {
 
   border-radius: 15px;
@@ -412,7 +485,6 @@ hr {
   width: 200px;
   height: 70px;
   margin-top: 20px;
-  margin-bottom: 70px;
 }
 
 .target {
@@ -434,8 +506,8 @@ hr {
   font-size: 180%;
 
   text-align: left;
-  margin-left: -48%;
-  margin-top: -4.8%;
+  margin-left: 30%;
+  margin-top: -4.7%;
   font-weight: bold;
 }
 
@@ -452,7 +524,6 @@ hr {
   font-weight: bold;
 }
 
-
 .isloggedin {
   z-index: 2;
   cursor: pointer;
@@ -463,9 +534,8 @@ hr {
   text-align: left;
 
   margin-top: -4.9%;
-  margin-left: -40%;
+  margin-left: 41%;
   font-weight: bold;
-  
 }
 
 .isloggedin:hover {
@@ -509,7 +579,7 @@ hr {
   color: rgb(1, 247, 255);
 
   font-size: 300%;
-  margin-bottom: 20px;
+  margin-bottom: -100px;
 
   animation: pulse 1.5s infinite;
   animation-timing-function: linear;  
@@ -571,4 +641,56 @@ input:hover {
 
 
 
+$h1:  rgba(45,45,45,1);
+$blue: #98b5cc;
+$yellow: #ffcc00;
+$outline: rgba(#fff, .4);
+$shadow: rgba($yellow, .5);
+html,
+body {
+	background: linear-gradient(45deg, rgba(45,45,45,1) 9%,rgba(0,0,0,1) 100%);
+	width: 100%;
+	height: 100%;
+}
 
+h1 {
+	font-family: 'CoreCircus', sans-serif;
+	font-size: 14vw;
+	text-align: center;
+	line-height: 1;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	color: $h1;
+	letter-spacing: -.5rem;
+	
+	&:before {
+		content: attr(data-heading);
+		position: absolute;
+		overflow: hidden;
+		color: $yellow;
+		width: 100%;
+		z-index: 5;
+		text-shadow: none;
+		left: 27%;
+		text-align: left;
+		animation: flicker 3s linear infinite;
+	}
+}
+
+
+
+
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		opacity: .99;
+		text-shadow: -1px -1px 0 $outline, 1px -1px 0 $outline, -1px 1px 0 $outline, 1px 1px 0 $outline, 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+		text-shadow: none;
+	}
+}

@@ -67,15 +67,10 @@ class App extends React.Component {
           <span onClick={this.logout} className="isloggedin">
             log out
           </span>
-          <div>
-            <Link to={"mainpage"}>
               <div className="maintitle-div">
-                {/* <span className="maintitle">Habi</span>
-                <span className="maintitle2">track</span> */}
+                <span className="maintitle">Habi</span>
+                <span className="maintitle2">track</span>
               </div>
-            </Link>
-            {/* <h5 className="tagline">Journal Of Exceptional Practices</h5> */}
-          </div>
         </header>
 
         <br />
