@@ -62,15 +62,14 @@ class Login extends Component {
     return (
       <>
         <div className="big-title">
-          <span className="maintitle3">Habi</span>
-          <span className="maintitle4">track</span>
-          <h5 className="tagline">Journal Of Exceptional Practices</h5>
         </div>
         <form className="logform" onSubmit={this.handleSubmit}>
           <button className="signup2 logtitle" disable>
-            Login
           </button>
           <br />
+          <span className="maintitle3">Habi</span>
+          <span className="maintitle4">track</span>
+          <h5 className="tagline">Journal Of Exceptional Practices</h5>
           <input
             id="logname"
             type="text"
