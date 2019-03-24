@@ -1,10 +1,11 @@
 import React from "react"
-import { Route, Switch, Link, withRouter } from "react-router-dom"
+import { Route, Switch, withRouter } from "react-router-dom"
 import "./App.css"
 import MainPage from "./components/MainPage"
 import SkillSelect from "./components/SkillSelect"
 import Login from "./components/Login"
 import Register from "./components/Register"
+import Home from "./components/Home"
 
 class App extends React.Component {
   state = {
@@ -16,7 +17,7 @@ class App extends React.Component {
     this.setState({
       user: {}
     })
-    this.props.history.push("/login")
+    this.props.history.push("/")
   }
 
   // --------------------FETCHES THE SINGLE USER-----------------
@@ -52,25 +53,25 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <img
-          className="topimage"
-          alt="Nothing"
-          src="https://i.imgur.com/lNzL1Jw.png"
-        />
-        <img
-          className="bottimage"
-          alt="Nothing"
-          src="https://i.imgur.com/Yb4LIvq.png"
-        />
         <header className="app-header">
-          <span className="welcomename">{this.state.user.username}</span>
-          <span onClick={this.logout} className="isloggedin">
-            log out
-          </span>
-              <div className="maintitle-div">
-                <span className="maintitle">Habi</span>
-                <span className="maintitle2">track</span>
-              </div>
+          <div className="maintitle-div">
+            <span className="maintitle">Habi</span>
+            <span className="maintitle2">track</span>
+          </div>
+
+          {this.state.user.username ? (
+            <div className="user-info">
+              <span className="welcomename">
+                {this.state.user.username}
+              </span>
+              <span onClick={this.logout} className="isloggedin">
+                {" "}
+                log out
+              </span>
+            </div>
+          ) : (
+              <Login user={this.state.user} getUser={this.getUser} />
+          )}
         </header>
 
         <br />
@@ -85,7 +86,7 @@ class App extends React.Component {
               exact
               path="/"
               render={props => (
-                <Login user={this.state.user} getUser={this.getUser} />
+                <Home user={this.state.user} getUser={this.getUser} />
               )}
             />
             <Route
@@ -93,13 +94,7 @@ class App extends React.Component {
               path="/skillselect"
               render={props => <SkillSelect user={this.state.user} />}
             />
-            <Route
-              exact
-              path="/login"
-              render={props => (
-                <Login user={this.state.user} getUser={this.getUser} />
-              )}
-            />
+           
             <Route
               exact
               path="/register"

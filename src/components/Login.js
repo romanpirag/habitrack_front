@@ -1,7 +1,5 @@
 import React, { Component } from "react"
-import { Link, withRouter } from "react-router-dom"
-// ;<i class="fas fa-arrow-alt-circle-left" />
-
+import { withRouter } from "react-router-dom"
 
 class Login extends Component {
   defaultState = {
@@ -25,6 +23,7 @@ class Login extends Component {
   }
 
   handleSubmit = e => {
+    console.log("cheeseburger")
     e.preventDefault()
     fetch("http://localhost:3000/api/v1/login", {
       method: "POST",
@@ -60,16 +59,7 @@ class Login extends Component {
 
   render() {
     return (
-      <>
-        <div className="big-title">
-        </div>
         <form className="logform" onSubmit={this.handleSubmit}>
-          <button className="signup2 logtitle" disable>
-          </button>
-          <br />
-          <span className="maintitle3">Habi</span>
-          <span className="maintitle4">track</span>
-          <h5 className="tagline">Journal Of Exceptional Practices</h5>
           <input
             id="logname"
             type="text"
@@ -90,13 +80,10 @@ class Login extends Component {
             required
           />
           <br />
-          <input className="logsubmit" type="submit" value="enter" />
+          <input className="logsubmit" type="submit" value="Log in" />
           <br />
-          <Link to={"/register"}>
-            <button className="signup">Signup</button>
-          </Link>
+        
         </form>
-      </>
     )
   }
 }

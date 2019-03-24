@@ -58,15 +58,16 @@ class MainPage extends React.Component {
     }
     return (
       <div>
-          <h3 className="skillform-titles your-daily">YOUR DAILY ROUTINES</h3>
-        <Link to={"/skillselect"}>
-          <button className="add-routine-button">ADD ROUTINE</button>
-        </Link>
-        <div>
+        <div className="page-title">
+          <h3 className="skillform-titles your-daily">
+            YOUR DAILY ROUTINES
+          </h3>
+          <Link className="button add-routine-button" to={"/skillselect"}>
+            ADD ROUTINE
+          </Link>
         </div>
-        <div className="days-container">
-           {this.daysMapped()}
-        </div>
+
+        <div className="days-container">{this.daysMapped()}</div>
       </div>
     )
   }

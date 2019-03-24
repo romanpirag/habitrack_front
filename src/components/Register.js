@@ -42,9 +42,10 @@ class Register extends Component {
   render() {
     return (
       <>
-        <form className="logform" onSubmit={this.handleSubmit}>
-          <button className="signup2 logtitle" disabled>SIGN UP!</button>
-          <br/>
+        <div className="page-title">
+          <h1 className="signup-title">SIGN UP!</h1>
+        </div>
+        <form className="register-form" onSubmit={this.handleSubmit}>
           <input
             id="logname"
             type="text"
@@ -64,8 +65,8 @@ class Register extends Component {
           />
           <br />
           <input className="logsubmit" type="submit" value="submit" />
-          <br/>
-          <Link to={"/login"}>
+          <br />
+          <Link to={"/"}>
             <button className="signup">Back</button>
           </Link>
         </form>
