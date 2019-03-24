@@ -6,6 +6,7 @@ import SkillSelect from "./components/SkillSelect"
 import Login from "./components/Login"
 import Register from "./components/Register"
 import Home from "./components/Home"
+import DayInfo from "./components/DayInfo"
 
 class App extends React.Component {
   state = {
@@ -82,6 +83,7 @@ class App extends React.Component {
               path="/mainpage"
               render={props => <MainPage user={this.state.user} />}
             />
+
             <Route
               exact
               path="/"
@@ -89,6 +91,7 @@ class App extends React.Component {
                 <Home user={this.state.user} getUser={this.getUser} />
               )}
             />
+            
             <Route
               exact
               path="/skillselect"
@@ -102,6 +105,15 @@ class App extends React.Component {
                 <Register user={this.state.user} getUser={this.getUser} />
               )}
             />
+
+            <Route
+              exact
+              path="/day/:id"
+              render={props => (
+                <DayInfo {...props}/>
+              )}
+            />
+
           </Switch>
         </main>
         <footer className="footer">

@@ -6,8 +6,9 @@ class Home extends Component {
   render() {
     return (
       <>
-        <button className="signup2 logtitle" disable />
-        <br />
+        <div className="page-title">
+          <h1 className="signup-title">SIGN UP!</h1>
+        </div>
         <img
           className="LOGO"
           alt="Nothing"
@@ -16,9 +17,7 @@ class Home extends Component {
 
         <h5 className="tagline">Journal Of Exceptional Practices</h5>
 
-        <Link to={"/register"}>
-          <button className="signup">Signup</button>
-        </Link>
+        <Link className="button" to={"/register"}>Signup</Link>
       </>
     )
   }
