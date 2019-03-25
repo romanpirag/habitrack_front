@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SkillCard from "./SkillCard"
-import { Link, withRouter } from "react-router-dom"
+import { withRouter } from "react-router-dom"
 
 class DayCard extends Component {
     state = {  }
