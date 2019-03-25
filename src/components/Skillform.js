@@ -40,7 +40,7 @@ class Skillform extends React.Component {
 
       .then(data => {
         this.props.updateSkills(data.skill)
-          this.setState(this.defaultState)
+        this.setState(this.defaultState)
       })
   }
 
@@ -75,7 +75,7 @@ class Skillform extends React.Component {
             />
           </div>
           <br />
-          <button className="skillsubmit" type="submit">
+          <button className="button fancy-button skillsubmit" type="submit">
             ADD
           </button>
         </form>

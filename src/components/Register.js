@@ -53,6 +53,7 @@ class Register extends Component {
             name="usernameValue"
             value={this.state.usernameValue}
             onChange={this.handleInputChange}
+            required
           />
           <br />
           <input
@@ -62,12 +63,13 @@ class Register extends Component {
             value={this.state.bioValue}
             placeholder="Password"
             onChange={this.handleInputChange}
+            required
           />
           <br />
-          <input className="logsubmit" type="submit" value="submit" />
-          <br />
-          <Link to={"/"}>
-            <button className="signup">Back</button>
+          <button className="button fancy-button" type="submit" value="submit">submit</button>
+          <br /><br/>
+          <Link className="button" to={"/"}>
+           Back
           </Link>
         </form>
       </>

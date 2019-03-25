@@ -19,9 +19,9 @@ body {
 
 h1 {
   text-align: center;
-   color: rgb(0, 247, 255);
-   font-size: 4rem;
-   margin: 2rem auto;
+  color: rgb(0, 247, 255);
+  font-size: 4rem;
+  margin: 2rem auto;
 }
 
 a {
@@ -47,9 +47,19 @@ hr {
 .button,
 .button:visited {
   background: white;
-  color: black;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 225, 255);
   padding: 5px 10px;
+  border-radius: 25%;
+  color: black;
+  border-radius: 15px;
+  height: 46px;
+  font-size: 200%;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1.25;
+   text-align: center;
+   cursor: pointer;
 }
 
 button:hover,
@@ -57,17 +67,27 @@ button:hover,
   /* ----Fast ScaleBox--- */
   transform: scale(1.1);
   transition: all ease 200ms;
-  /* background: rgb(0, 0, 0); */
-  /* box-shadow: 0 0 25px #000; */
-  text-align: center;
-  /* display: block; */
   text-decoration: none;
-  font-weight: bold;
+}
+
+.fancy-button,
+.fancy-button:visited {
+  border-radius: 25px;
+  background: black;
+  font-size: 50px;
+  color: rgb(0, 225, 255);
+
+  height: 70px;
+  animation: pulse 1.5s infinite;
+  animation-timing-function: linear;
+  margin-top: 40px;
+  /* line-height: 1; */
 }
 
 /* FORMS */
 
-input[type="text"], input[type="password"] {
+input[type="text"],
+input[type="password"] {
   border-radius: 15px;
   width: 105px;
   height: 37px;
@@ -82,6 +102,24 @@ input:hover {
   transition: all ease 150ms;
 }
 
+textarea {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: white;
+  font-size: 2rem;
+  font-family: "Amatic SC", cursive;
+  width: 40%;
+  height: 300px;
+  font-weight: 700;
+  resize: none;
+  outline: none;
+}
+textarea:focus {
+  border: 1px solid white;
+  border-radius: 20px;
+  
+}
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* HEADER */
@@ -253,16 +291,6 @@ main {
   margin-bottom: 30px;
 }
 
-.add-routine-button {
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  border-radius: 15px;
-  width: 105px;
-  font-size: 120%;
-  font-family: "Amatic SC", cursive;
-  font-weight: 700;
-}
 
 /* LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN------------ */
 
@@ -288,11 +316,7 @@ main {
 }
 
 .register-form {
-
-
-
 }
-
 
 .logsubmit {
   color: rgb(0, 225, 255);
@@ -306,27 +330,8 @@ main {
   border: 1px solid rgb(0, 0, 0);
 }
 
-.signup {
-  cursor: pointer;
-  border-radius: 25px;
-  font-family: "Amatic SC", cursive;
-  font-weight: 700;
-  font-size: 50px;
-  color: rgb(5, 255, 192);
-  width: 120px;
-  height: 70px;
-  background: black;
-  border: 2px solid rgb(41, 255, 209);
-  cursor: pointer;
-  animation: pulse 1.5s infinite;
-  animation-timing-function: linear;
-  margin-top: 20px;
-}
-
 .signup-title {
   margin-top: 160px;
-
-
 }
 
 /* ----SKILLSELECT--------SKILL SELECT------SKILL SELECT-----------SSSSSKKK-----------SSSKKKKKKKKK--------------------------------------- */
@@ -378,14 +383,6 @@ main {
   padding-right: 1rem;
 }
 .skillsubmit {
-  box-shadow: 5px 5px;
-  cursor: pointer;
-  border-radius: 25px;
-  font-family: "Amatic SC", cursive;
-  font-weight: 700;
-  font-size: 50px;
-  width: 120px;
-  height: 70px;
   margin-top: 20px;
   margin-bottom: 30px;
 }

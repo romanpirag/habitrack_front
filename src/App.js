@@ -1,5 +1,5 @@
 import React from "react"
-import { Route, Switch, withRouter } from "react-router-dom"
+import { Route, Switch, withRouter, Link } from "react-router-dom"
 import "./App.css"
 import MainPage from "./components/MainPage"
 import SkillSelect from "./components/SkillSelect"
@@ -56,22 +56,31 @@ class App extends React.Component {
       <div className="App">
         <header className="app-header">
           <div className="maintitle-div">
-            <span className="maintitle">Habi</span>
-            <span className="maintitle2">track</span>
+            {this.state.user.id ? (
+              <>
+                <Link to={"/mainpage"}>
+                  <span className="maintitle">Habi</span>
+                  <span className="maintitle2">track</span>
+                </Link>
+              </>
+            ) : (
+              <>
+                <span className="maintitle">Habi</span>
+                <span className="maintitle2">track</span>{" "}
+              </>
+            )}
           </div>
 
           {this.state.user.username ? (
             <div className="user-info">
-              <span className="welcomename">
-                {this.state.user.username}
-              </span>
+              <span className="welcomename">{this.state.user.username}</span>
               <span onClick={this.logout} className="isloggedin">
                 {" "}
                 log out
               </span>
             </div>
           ) : (
-              <Login user={this.state.user} getUser={this.getUser} />
+            <Login user={this.state.user} getUser={this.getUser} />
           )}
         </header>
 
@@ -91,13 +100,13 @@ class App extends React.Component {
                 <Home user={this.state.user} getUser={this.getUser} />
               )}
             />
-            
+
             <Route
               exact
               path="/skillselect"
               render={props => <SkillSelect user={this.state.user} />}
             />
-           
+
             <Route
               exact
               path="/register"
@@ -109,11 +118,8 @@ class App extends React.Component {
             <Route
               exact
               path="/day/:id"
-              render={props => (
-                <DayInfo {...props}/>
-              )}
+              render={props => <DayInfo {...props} />}
             />
-
           </Switch>
         </main>
         <footer className="footer">

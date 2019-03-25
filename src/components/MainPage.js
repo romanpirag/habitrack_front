@@ -62,7 +62,7 @@ class MainPage extends React.Component {
           <h3 className="skillform-titles your-daily">
             YOUR DAILY ROUTINES
           </h3>
-          <Link className="button add-routine-button" to={"/skillselect"}>
+          <Link className="button" to={"/skillselect"}>
             ADD ROUTINE
           </Link>
         </div>

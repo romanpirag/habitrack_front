@@ -98,7 +98,7 @@ class DayInfo extends Component {
       <>
         <div className="page-title">
           <h1 className="signup-title">
-            DAY PLACEHOLDER: day {this.props.match.params.id}
+            {this.state.day.name}
           </h1>
           <form onSubmit={this.submitHandle}>
             <textarea
@@ -109,7 +109,7 @@ class DayInfo extends Component {
               placeholder="Write your feelings!"
             />
             <br />
-            <button type="submit">CLOCK OUT!</button>
+            <button className="button fancy-button" type="submit">CLOCK OUT!</button>
           </form>
         </div>
 
