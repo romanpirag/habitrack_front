@@ -9,8 +9,8 @@ class Home extends Component {
         <div className="page-title">
         </div>
         <img
-          className="LOGO"
-          alt="Nothing"
+                className="LOGO"
+          alt="Logo"
                 src="https://i.imgur.com/4B4l9qw.png"
         />
 

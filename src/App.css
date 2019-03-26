@@ -7,7 +7,7 @@ html {
 body {
   /* background: url(https://jooinn.com/images/black-rock-background-2.jpg); */
   /* background: url(https://cdn.shopify.com/s/files/1/2930/2308/products/old-master-black-with-center-warm-gray-texture-backdrop_250cfb6d-a278-4efd-a4df-d99231ec08cd_1024x1024@2x.jpg?v=1535698605); */
-  background: url(https://i.imgur.com/nclE6rv.jpg);
+  background: url(https://i.imgur.com/iDKbMkf.jpg);
   background-attachment: fixed;
   color: rgb(0, 0, 0);
   font-family: "Amatic SC", cursive;
@@ -58,9 +58,9 @@ hr {
   font-weight: 700;
   display: inline-block;
   line-height: 1.25;
-   text-align: center;
-   cursor: pointer;
-   box-shadow: 5px 10px 6px #000000;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 5px 10px 6px #000000;
 }
 
 button:hover,
@@ -102,13 +102,11 @@ button:hover,
   background: black;
   font-size: 50px;
 
-
   height: 62px;
   animation: pulse 1.5s infinite;
   animation-timing-function: linear;
   margin-top: 30px;
 }
-
 
 .signup-submit {
   height: 60px;
@@ -119,10 +117,10 @@ button:hover,
   transform: scale(1.1);
   transition: all ease 200ms;
   text-decoration: none;
-   background: black;
-   color: rgb(0, 225, 255);
+  background: black;
+  color: rgb(0, 225, 255);
 
-   margin-top: 30px;
+  margin-top: 30px;
 }
 
 /* FORMS */
@@ -206,11 +204,9 @@ header {
 
 /* ----------------------------------------0000000000000------USERNAME TOP RIGHT */
 
-
 .done-date {
   color: rgb(255, 0, 0);
 
-  
   font-size: 3rem;
   margin: 0;
   margin-top: 8px;
@@ -227,13 +223,11 @@ header {
 
   color: #f35626;
   -webkit-animation: hue 4s infinite linear;
-  
 }
 
 .cross {
   width: 70%;
   margin-top: 10px;
-
 }
 
 .user-info {
@@ -247,8 +241,6 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-
-
 
 .welcomename {
   cursor: pointer;
@@ -278,7 +270,7 @@ header {
 }
 
 .isloggedin {
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   background: black;
@@ -286,8 +278,7 @@ header {
   margin-left: 16px;
   padding: 6px;
   cursor: pointer;
-} 
-
+}
 
 @media (min-width: 600px) {
   .isloggedin {
@@ -325,17 +316,15 @@ header {
   box-shadow: 0px -10px 10px #000000;
   cursor: default;
 
-   color: #f35626;
+  color: #f35626;
   -webkit-animation: hue 4s infinite linear;
 }
 
-
 .copyright {
   font-size: 1.8rem;
-  position: fixed; 
-  margin-top: .5%;
+  position: fixed;
+  margin-top: 0.5%;
   padding-left: 15px;
-
 }
 
 .gitlink {
@@ -365,9 +354,8 @@ header {
   text-align: left;
   box-shadow: 0px 5px 10px #000000;
 
-   color: #f35626;
+  color: #f35626;
   -webkit-animation: hue 4s infinite linear;
-
 }
 
 .App-link {
@@ -393,7 +381,6 @@ main {
   animation-timing-function: linear;
   max-width: 100%;
 
-
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
@@ -415,12 +402,15 @@ main {
   z-index: -1;
   max-width: 100%;
   margin-top: -50px;
-  
+
   color: #f35626;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 4s infinite linear;
+
+  animation: shake 3000ms infinite;
+  animation-timing-function: linear;
 }
 
 .LOGOsmall {
@@ -443,7 +433,6 @@ main {
 .page-title {
   margin-bottom: 10px;
 }
-
 
 /* LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN------------ */
 
@@ -487,7 +476,7 @@ main {
 }
 
 .dayinfo-all {
-  margin-top: 110px;
+  margin-top: 80px;
 
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -508,7 +497,6 @@ main {
 
 #logname {
   margin: 10px;
-
 }
 
 /* ----SKILLSELECT--------SKILL SELECT------SKILL SELECT-----------SSSSSKKK-----------SSSKKKKKKKKK--------------------------------------- */
@@ -518,17 +506,15 @@ main {
   margin-bottom: 15px;
   color: rgb(0, 247, 255);
 
-
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
 .your-daily-habits {
- font-size: 3rem;
+  font-size: 3rem;
   margin-bottom: 15px;
   color: rgb(255, 196, 107);
-
 
   -webkit-animation: glow-orange 1s ease-in-out infinite alternate;
   -moz-animation: glow-orange 1s ease-in-out infinite alternate;
@@ -537,15 +523,13 @@ main {
 .your-daily-routine {
   transform: rotate(2deg);
   margin: 0;
- font-size: 2.5rem;
+  font-size: 2.5rem;
   color: rgb(255, 196, 107);
-
 
   -webkit-animation: glow-orange 1s ease-in-out infinite alternate;
   -moz-animation: glow-orange 1s ease-in-out infinite alternate;
   animation: glow-orange 1s ease-in-out infinite alternate;
 }
-
 
 .yourskills {
   color: white;
@@ -567,7 +551,6 @@ main {
 
 .skilllist-div {
   display: flex;
-
 }
 
 .skillform {
@@ -625,8 +608,7 @@ main {
 }
 
 .circle {
-  font-size: .8rem
-
+  font-size: 0.8rem;
 }
 
 /* -----------------MAIN PAGE------------------------------------------- */
@@ -634,8 +616,6 @@ main {
 .day-skills {
   text-align: left;
 }
-
-
 
 .journal-title {
   color: orange;
@@ -686,7 +666,6 @@ main {
 
 .addroutine {
   margin-bottom: 20px;
-
 }
 
 .skilldiv {
@@ -803,69 +782,44 @@ main {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 2px rgb(96, 163, 240), 0 0 10px rgb(64, 238, 223), 0 0 20px 
+    text-shadow: 0 0 2px rgb(96, 163, 240), 0 0 10px rgb(64, 238, 223), 0 0 20px;
   }
   to {
-    text-shadow: 0 0 5px rgb(105, 226, 216), 0 0 20px #66d4e2, 0 0 30px 
+    text-shadow: 0 0 5px rgb(105, 226, 216), 0 0 20px #66d4e2, 0 0 30px;
   }
 }
 
 @-webkit-keyframes glow-orange {
   from {
-    text-shadow: 0 0 2px rgb(236, 127, 53), 0 0 10px rgb(248, 130, 20), 0 0 20px 
+    text-shadow: 0 0 2px rgb(236, 127, 53), 0 0 10px rgb(248, 130, 20), 0 0 20px;
   }
   to {
-    text-shadow: 0 0 5px rgb(255, 144, 41), 0 0 20px #ffb560, 0 0 30px 
+    text-shadow: 0 0 5px rgb(255, 144, 41), 0 0 20px #ffb560, 0 0 30px;
   }
 }
 /* ---------------------------------------------------------------------------------- */
 
-/* $h1:  rgba(45,45,45,1);
-$blue: #98b5cc;
-$yellow: #ffcc00;
-$outline: rgba(#fff, .4);
-$shadow: rgba($yellow, .5);
-html,
-body {
-	background: linear-gradient(45deg, rgba(45,45,45,1) 9%,rgba(0,0,0,1) 100%);
-	width: 100%;
-	height: 100%;
-} */
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-/* h1 {
-	font-family: 'CoreCircus', sans-serif;
-	font-size: 14vw;
-	text-align: center;
-	line-height: 1;
-	margin: 0;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	position: absolute;
-	color: $h1;
-	letter-spacing: -.5rem;
-	
-	&:before {
-		content: attr(data-heading);
-		position: absolute;
-		overflow: hidden;
-		color: $yellow;
-		width: 100%;
-		z-index: 5;
-		text-shadow: none;
-		left: 27%;
-		text-align: left;
-		animation: flicker 3s linear infinite;
-	}
-} */
-
-/* @keyframes flicker {
-	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-		opacity: .99;
-		text-shadow: -1px -1px 0 $outline, 1px -1px 0 $outline, -1px 1px 0 $outline, 1px 1px 0 $outline, 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
-	}
-	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-		opacity: 0.4;
-		text-shadow: none;
-	}
-} */
+@keyframes wiggle {
+  0% {
+    transform: translate(2px, 0);
+  }
+  50% {
+    transform: translate(-2px, 0);
+  }
+  100% {
+    transform: translate(2px, 0);
+  }
+}

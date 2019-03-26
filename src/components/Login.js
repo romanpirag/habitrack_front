@@ -80,7 +80,7 @@ class Login extends Component {
             required
           />
           <br />
-          <input className="logsubmit" type="submit" value="Log in" />
+          <input className="logsubmit" type="submit" value="Enter" />
           <br />
         
         </form>

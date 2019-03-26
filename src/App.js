@@ -59,8 +59,6 @@ class App extends React.Component {
             {this.state.user.id ? (
               <>
                 <Link to={"/mainpage"}>
-                  {/* <span className="maintitle">Habi</span>
-                  <span className="maintitle2">track</span> */}
                   <img
                     className="LOGOsmall"
                     alt="Nothing"
@@ -86,7 +84,7 @@ class App extends React.Component {
               </span>
               <span onClick={this.logout} className="isloggedin logout">
                 {" "}
-                log out
+                EXIT
               </span>
             </div>
           ) : (
