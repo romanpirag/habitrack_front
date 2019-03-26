@@ -11,12 +11,12 @@ class Home extends Component {
         <img
           className="LOGO"
           alt="Nothing"
-          src="https://i.imgur.com/VQcdCjS.png"
+                src="https://i.imgur.com/4B4l9qw.png"
         />
 
         <h5 className="tagline">Journal Of Exceptional Practices</h5>
 
-        <Link className="button fancy-button" to={"/register"}>signup</Link>
+            <Link className="signup-button" to={"/register"}>signup</Link>
       </>
     )
   }

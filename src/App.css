@@ -7,7 +7,7 @@ html {
 body {
   /* background: url(https://jooinn.com/images/black-rock-background-2.jpg); */
   /* background: url(https://cdn.shopify.com/s/files/1/2930/2308/products/old-master-black-with-center-warm-gray-texture-backdrop_250cfb6d-a278-4efd-a4df-d99231ec08cd_1024x1024@2x.jpg?v=1535698605); */
-  background: url(https://i.imgur.com/mvmqimV.jpg);
+  background: url(https://i.imgur.com/nclE6rv.jpg);
   background-attachment: fixed;
   color: rgb(0, 0, 0);
   font-family: "Amatic SC", cursive;
@@ -29,11 +29,11 @@ a {
 }
 
 a:link {
-  color: rgb(49, 91, 182);
+  color: rgb(39, 195, 223);
 }
 
 a:visited {
-  color: rgb(49, 91, 182);
+  color: rgb(34, 213, 219);
 }
 
 hr {
@@ -60,6 +60,7 @@ hr {
   line-height: 1.25;
    text-align: center;
    cursor: pointer;
+   box-shadow: 5px 10px 6px #000000;
 }
 
 button:hover,
@@ -80,8 +81,48 @@ button:hover,
   height: 70px;
   animation: pulse 1.5s infinite;
   animation-timing-function: linear;
-  margin-top: 40px;
+  margin-top: 30px;
   /* line-height: 1; */
+}
+
+.signup-button {
+  width: 10%;
+  border: 2px solid rgb(0, 225, 255);
+  padding: 2px 5px;
+  border-radius: 25%;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 5px 10px 6px #000000;
+
+  border-radius: 25px;
+  background: black;
+  font-size: 50px;
+
+
+  height: 62px;
+  animation: pulse 1.5s infinite;
+  animation-timing-function: linear;
+  margin-top: 30px;
+}
+
+
+.signup-submit {
+  height: 60px;
+
+  animation: pulse 1.5s infinite;
+  animation-timing-function: linear;
+
+  transform: scale(1.1);
+  transition: all ease 200ms;
+  text-decoration: none;
+   background: black;
+   color: rgb(0, 225, 255);
+
+   margin-top: 30px;
 }
 
 /* FORMS */
@@ -89,12 +130,12 @@ button:hover,
 input[type="text"],
 input[type="password"] {
   border-radius: 15px;
-  width: 105px;
+  width: 110px;
   height: 37px;
   font-size: 1.5rem;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 input:hover {
   /* ----Fast ScaleBox--- */
@@ -110,16 +151,16 @@ textarea {
   font-size: 2rem;
   font-family: "Amatic SC", cursive;
   width: 40%;
-  height: 300px;
+  height: 250px;
   font-weight: 700;
   resize: none;
   outline: none;
 }
-textarea:focus {
+/* textarea:focus {
   border: 1px solid white;
   border-radius: 20px;
   
-}
+} */
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* HEADER */
@@ -132,6 +173,7 @@ header {
   z-index: 1;
   width: 100%;
   justify-content: space-between;
+  height: 10%;
 }
 
 .maintitle {
@@ -158,10 +200,46 @@ header {
 
 .maintitle-div,
 .user-info {
-  padding: 10px;
+  display: flex;
+  padding: 15px;
 }
 
 /* ----------------------------------------0000000000000------USERNAME TOP RIGHT */
+
+
+.done-date {
+  color: rgb(255, 0, 0);
+
+  
+  font-size: 3rem;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: -20px;
+
+  text-shadow: 6px 10px 2px #000000;
+}
+
+.done {
+  font-size: 3rem;
+  color: rgb(255, 94, 0);
+
+  text-shadow: 0px 10px 7px #000000;
+
+  color: #f35626;
+  -webkit-animation: hue 4s infinite linear;
+  
+}
+
+.cross {
+  width: 70%;
+  margin-top: 10px;
+
+}
+
+.user-info {
+  margin-right: 20px;
+  text-align: right;
+}
 
 .welcomename,
 .isloggedin {
@@ -169,12 +247,21 @@ header {
   flex-direction: column;
   justify-content: center;
 }
+
+
+
 .welcomename {
   cursor: pointer;
-  color: rgb(255, 255, 255);
-  font-size: 180%;
-  text-align: left;
+  color: rgb(255, 222, 180);
+  font-size: 1.4rem;
+  text-align: right;
   font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  .welcomename {
+    font-size: 3rem;
+  }
 }
 
 .welcomename:hover {
@@ -191,13 +278,24 @@ header {
 }
 
 .isloggedin {
+  font-size: .7rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  background: black;
+  border: 2px solid rgb(18, 219, 219);
+  margin-left: 16px;
+  padding: 6px;
   cursor: pointer;
-  color: rgb(255, 102, 0);
-  font-size: 200%;
-  text-align: left;
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-left: 10px;
+} 
+
+
+@media (min-width: 600px) {
+  .isloggedin {
+    font-size: 2rem;
+    margin: 0;
+    margin-left: 16px;
+    font-family: "Amatic SC", cursive;
+  }
 }
 
 .isloggedin:hover {
@@ -221,20 +319,55 @@ header {
   bottom: 0;
   width: 100%;
   font-size: 300%;
-  height: 30px;
+  height: 50px;
   background: black;
   border-top: 2px solid rgb(6, 205, 255);
+  box-shadow: 0px -10px 10px #000000;
+  cursor: default;
+
+   color: #f35626;
+  -webkit-animation: hue 4s infinite linear;
 }
 
-.footer-div:hover {
-  transform: scale(1.1);
-  transition: all ease 100ms;
+
+.copyright {
+  font-size: 1.8rem;
+  position: fixed; 
+  margin-top: .5%;
+  padding-left: 15px;
+
+}
+
+.gitlink {
+  margin-left: 95%;
+  font-size: 77%;
+}
+
+.linkedin-link {
+  margin-left: -20%;
+  font-size: 77%;
+}
+
+@media (min-width: 600px) {
+  .linkedin-link {
+    margin: 0;
+    margin-left: -80px;
+  }
 }
 
 /* APP */
 
 .App {
   text-align: center;
+}
+
+.app-header {
+  text-align: left;
+  box-shadow: 0px 5px 10px #000000;
+
+   color: #f35626;
+  -webkit-animation: hue 4s infinite linear;
+
 }
 
 .App-link {
@@ -253,42 +386,62 @@ main {
 
 .tagline {
   color: rgb(230, 230, 230);
-  font-size: 180%;
+  font-size: 190%;
   margin-bottom: -1.5%;
-  margin-top: -1%;
+  margin-top: -4%;
   animation: shake 1000ms infinite;
   animation-timing-function: linear;
   max-width: 100%;
+
+
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
 @media (min-width: 500px) {
   .tagline {
-    font-size: 280%;
+    font-size: 260%;
   }
 }
 
 @media (min-width: 768px) {
   .tagline {
-    font-size: 350%;
+    font-size: 260%;
   }
 }
 
 .LOGO {
-  /* width: 20%; */
+  z-index: -1;
+  max-width: 100%;
+  margin-top: -50px;
+  
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 4s infinite linear;
+}
+
+.LOGOsmall {
+  max-width: 190px;
 
   color: #f35626;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 4s infinite linear;
-  max-width: 100%;
+}
+
+.maintitle-div {
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 /* SHARED */
 
 .page-title {
-  margin-top: 70px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 
@@ -312,29 +465,87 @@ main {
   margin-top: 0%;
   justify-content: space-evenly;
   align-items: center;
-  margin-right: 10px;
-}
-
-.register-form {
+  margin-right: 15px;
 }
 
 .logsubmit {
   color: rgb(0, 225, 255);
   border-radius: 15px;
   height: 50px;
+  margin: 10px;
+  margin-right: 40px;
 
   font-size: 200%;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   background: black;
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid rgb(18, 219, 219);
+}
+
+#register-field {
+  width: 400px;
+}
+
+.dayinfo-all {
+  margin-top: 110px;
+
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
 .signup-title {
-  margin-top: 160px;
+  margin-top: 150px;
+
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.footer-div {
+  display: flex;
+}
+
+#logname {
+  margin: 10px;
+
 }
 
 /* ----SKILLSELECT--------SKILL SELECT------SKILL SELECT-----------SSSSSKKK-----------SSSKKKKKKKKK--------------------------------------- */
+
+.your-daily {
+  font-size: 5rem;
+  margin-bottom: 15px;
+  color: rgb(0, 247, 255);
+
+
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.your-daily-habits {
+ font-size: 3rem;
+  margin-bottom: 15px;
+  color: rgb(255, 196, 107);
+
+
+  -webkit-animation: glow-orange 1s ease-in-out infinite alternate;
+  -moz-animation: glow-orange 1s ease-in-out infinite alternate;
+  animation: glow-orange 1s ease-in-out infinite alternate;
+}
+.your-daily-routine {
+  transform: rotate(2deg);
+  margin: 0;
+ font-size: 2.5rem;
+  color: rgb(255, 196, 107);
+
+
+  -webkit-animation: glow-orange 1s ease-in-out infinite alternate;
+  -moz-animation: glow-orange 1s ease-in-out infinite alternate;
+  animation: glow-orange 1s ease-in-out infinite alternate;
+}
+
 
 .yourskills {
   color: white;
@@ -344,7 +555,9 @@ main {
 }
 
 .skilllist {
-  margin: 20px;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .skilllist:hover {
@@ -352,16 +565,20 @@ main {
   transition: all ease 150ms;
 }
 
+.skilllist-div {
+  display: flex;
+
+}
+
 .skillform {
   margin-top: 10px;
 }
 
 .skillinput {
-  box-shadow: 5px 10px;
+  /* box-shadow: 5px 10px; */
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   border-radius: 15px;
-  margin: 20px;
   font-size: 38px;
   width: 200px;
   height: 38px;
@@ -370,7 +587,7 @@ main {
 }
 
 .hourselect {
-  box-shadow: 5px 10px;
+  /* box-shadow: 5px 10px; */
   cursor: pointer;
   border-radius: 15px;
   font-family: "Amatic SC", cursive;
@@ -391,18 +608,49 @@ main {
   color: rgb(0, 247, 255);
   font-size: 50px;
   margin: 0;
+
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 .skillform-titles2 {
   transform: rotate(2deg);
   color: rgb(0, 247, 255);
   font-size: 50px;
   margin: 0;
+
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.circle {
+  font-size: .8rem
+
 }
 
 /* -----------------MAIN PAGE------------------------------------------- */
 
+.day-skills {
+  text-align: left;
+}
+
+
+
+.journal-title {
+  color: orange;
+
+  font-size: 3rem;
+  margin-top: -30px;
+  margin-bottom: -1px;
+
+  -webkit-animation: glow-orange 1s ease-in-out infinite alternate;
+  -moz-animation: glow-orange 1s ease-in-out infinite alternate;
+  animation: glow-orange 1s ease-in-out infinite alternate;
+}
+
 .singleskill {
-  margin: 25px;
+  margin: 30px;
   margin-top: -30px;
   margin-bottom: 20px;
   color: white;
@@ -432,7 +680,13 @@ main {
   width: 100%;
   height: 100%;
   justify-content: space-evenly;
-  margin-top: -2%;
+  margin-top: -1%;
+  margin-bottom: 4%;
+}
+
+.addroutine {
+  margin-bottom: 20px;
+
 }
 
 .skilldiv {
@@ -443,10 +697,6 @@ main {
   border-radius: 15px;
   margin: 10px;
   cursor: pointer;
-}
-
-.skilldiv.day-complete {
-  background: rgb(60, 139, 184);
 }
 
 @media (min-width: 768px) {
@@ -479,42 +729,6 @@ main {
   margin-left: 35%;
 }
 
-/* .your-daily {
-  z-index: 2;
-  position: fixed;
-  margin-top: 20px;
-  color: rgb(0, 225, 255);
-  text-align: left;
-  margin-left: 40%;
-  margin-top: -4.7%;
-  font-weight: bold;
-  font-size: 200%;
-} */
-
-/* .your-daily2 {
-  z-index: 2;
-  position: fixed;
-  margin-top: 20px;
-  color: rgb(0, 225, 255);
-  text-align: left;
-  margin-left: 40%;
-  margin-top: -7.4%;
-  font-weight: bold;
-  font-size: 200%;
-} */
-
-/* .your-daily:hover {
-  
-  transform: scale(1.1);
-  transition: all ease 100ms;
-
-  text-align: center;
-
-  color: rgb(0, 247, 255);
-  text-decoration: none;
-  font-weight: bold;
-} */
-
 .target {
   color: rgb(36, 149, 255);
   font-weight: 700;
@@ -535,6 +749,9 @@ main {
   height: 70px;
   margin-top: 40px;
   margin-bottom: 70px;
+
+  animation: pulse 1.5s infinite;
+  animation-timing-function: linear;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -584,6 +801,23 @@ main {
   }
 }
 
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 2px rgb(96, 163, 240), 0 0 10px rgb(64, 238, 223), 0 0 20px 
+  }
+  to {
+    text-shadow: 0 0 5px rgb(105, 226, 216), 0 0 20px #66d4e2, 0 0 30px 
+  }
+}
+
+@-webkit-keyframes glow-orange {
+  from {
+    text-shadow: 0 0 2px rgb(236, 127, 53), 0 0 10px rgb(248, 130, 20), 0 0 20px 
+  }
+  to {
+    text-shadow: 0 0 5px rgb(255, 144, 41), 0 0 20px #ffb560, 0 0 30px 
+  }
+}
 /* ---------------------------------------------------------------------------------- */
 
 /* $h1:  rgba(45,45,45,1);

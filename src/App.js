@@ -59,22 +59,32 @@ class App extends React.Component {
             {this.state.user.id ? (
               <>
                 <Link to={"/mainpage"}>
-                  <span className="maintitle">Habi</span>
-                  <span className="maintitle2">track</span>
+                  {/* <span className="maintitle">Habi</span>
+                  <span className="maintitle2">track</span> */}
+                  <img
+                    className="LOGOsmall"
+                    alt="Nothing"
+                    src="https://i.imgur.com/4B4l9qw.png"
+                  />
                 </Link>
               </>
             ) : (
               <>
-                <span className="maintitle">Habi</span>
-                <span className="maintitle2">track</span>{" "}
+                <img
+                  className="LOGOsmall"
+                  alt="Nothing"
+                  src="https://i.imgur.com/4B4l9qw.png"
+                />
               </>
             )}
           </div>
 
           {this.state.user.username ? (
             <div className="user-info">
-              <span className="welcomename">{this.state.user.username}</span>
-              <span onClick={this.logout} className="isloggedin">
+              <span className="welcomename">
+                {this.state.user.username}
+              </span>
+              <span onClick={this.logout} className="isloggedin logout">
                 {" "}
                 log out
               </span>
@@ -123,10 +133,25 @@ class App extends React.Component {
           </Switch>
         </main>
         <footer className="footer">
-          {/* <a className="gitlink" href="https://github.com/romabot">
-            <i class="fab fa-github-square" />
-          </a> */}
-          {/* <p>&copy; ROMA all rights reserved 2019</p> */}
+          <div className="footer-div">
+            <a
+              className="gitlink"
+              href="https://github.com/romabot"
+              target="_blank"
+            >
+              <i class="fab fa-github-square" />
+            </a>
+            <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/roma-pirag-690979172/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin" />
+            </a>
+            <h1 className="copyright">
+              &copy; ROMABot all rights reserved 2019
+            </h1>
+          </div>
         </footer>
       </div>
     )

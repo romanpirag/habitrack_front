@@ -45,9 +45,9 @@ class Register extends Component {
         <div className="page-title">
           <h1 className="signup-title">SIGN UP!</h1>
         </div>
-        <form className="register-form" onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <input
-            id="logname"
+            id="register-field"
             type="text"
             placeholder="Username"
             name="usernameValue"
@@ -57,7 +57,7 @@ class Register extends Component {
           />
           <br />
           <input
-            id="logpass"
+            id="register-field"
             type="password"
             name="passwordValue"
             value={this.state.bioValue}
@@ -66,11 +66,18 @@ class Register extends Component {
             required
           />
           <br />
-          <button className="button fancy-button" type="submit" value="submit">submit</button>
-          <br /><br/>
-          <Link className="button" to={"/"}>
-           Back
-          </Link>
+          <button
+            className="button signup-submit"
+            type="submit"
+            value="submit"
+          >
+            submit
+          </button>
+          <br />
+          <br />
+          {/* <Link className="button" to={"/"}>
+            Back
+          </Link> */}
         </form>
       </>
     )

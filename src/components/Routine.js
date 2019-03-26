@@ -60,7 +60,7 @@ class Routine extends React.Component {
               value={this.state.dayAmount}
             />
           </div>
-          <button className="create-routine" type="submit">
+          <button className="create-routine button" type="submit">
             CREATE ROUTINE
           </button>
         </form>

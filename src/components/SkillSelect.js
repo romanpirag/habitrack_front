@@ -47,7 +47,9 @@ class SkillSelect extends React.Component {
     return (
       <>
         <div className="page-title">
-          <h3 className="skillform-titles">Choose your Daily Habits</h3>
+          <h3 className="your-daily-habits">
+            Choose your Daily Habits
+          </h3>
         </div>
 
         <Skillform
