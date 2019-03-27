@@ -12,6 +12,14 @@ class SkillCard extends Component {
                 {" "}
                 Target: {this.props.skill.target}hrs
               </span>
+              <span>
+                {" "}
+                {this.props.skill.hard ? (
+                  <span className="hardsmash">HARD</span>
+                ) : (
+                  <span className="easysmash">EASY</span>
+                )}
+              </span>
             </h2>
           </>
         )

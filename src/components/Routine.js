@@ -1,6 +1,7 @@
 import React from "react"
 import { withRouter } from "react-router-dom"
 
+// CHILD OF SkillSelect
 class Routine extends React.Component {
   state = {
     dayAmount: 0
@@ -42,12 +43,13 @@ class Routine extends React.Component {
   render() {
     return (
       <>
-        <form className="skillform" onSubmit={this.handleSubmit}>
+        <form className="skill-routine-table" onSubmit={this.handleSubmit}>
           */}
           <br />
           <div className="skilldiv2 numdays">
             <h3 className="skillform-titles">Number of Days</h3>
           </div>
+          {/* ------------NUMBER OF DAYS SELECTOR--------- */}
           <div className="numarrows">
             <input
               onChange={this.handleInputChange}
@@ -60,7 +62,10 @@ class Routine extends React.Component {
               value={this.state.dayAmount}
             />
           </div>
-          <button className="create-routine button" type="submit">
+          <button
+            className="create-routine button create-routine-button"
+            type="submit"
+          >
             CREATE ROUTINE
           </button>
         </form>

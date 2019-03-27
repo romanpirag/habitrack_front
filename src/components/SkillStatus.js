@@ -1,5 +1,6 @@
 import React from "react"
 
+// CHILD OF DayInfo
 class SkillStatus extends React.Component {
   state = {
     completed: false
@@ -45,20 +46,22 @@ class SkillStatus extends React.Component {
   }
 
   render() {
+    console.log("STUFF", this.props.ds)
     return (
       <div className="skill-status">
-        <h3>Skill name: {this.props.ds.skill_name}</h3>
-        <h5>Difficulty: {this.props.ds.hard ? "HARD" : "EASY"} </h5>
-        COMPLETEDPROPS: {this.props.ds.completed}
         <div className="form-check">
+         {/* ------------COMPLETED CHECKBOX--------- */}
           <label>
+            <span className="skilllist-end">{this.props.ds.skill_name}</span>
+        {/* <h5>Difficulty: {this.props.ds.hard ? "HARD" : "EASY"} </h5> */}
             <input
+              className="happycheck"
               type="checkbox"
               value={this.state.completed}
               checked={this.state.completed}
               onChange={this.onChangeHandle}
             />
-            Completed {!this.state.completed || "(hellyea)"}
+            Completed {!this.state.completed}
           </label>
         </div>
       </div>

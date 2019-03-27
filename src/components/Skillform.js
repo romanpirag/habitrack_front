@@ -1,10 +1,13 @@
 import React from "react"
 
+// CHILD OF SkillSelect
 class Skillform extends React.Component {
   defaultState = {
     skillValue: "",
-    targetValue: 0
+    targetValue: 1,
+    hardValue: false
   }
+  
   state = this.defaultState
 
   handleInputChange = e => {
@@ -14,6 +17,14 @@ class Skillform extends React.Component {
       [inputName]: e.target.value
     })
   }
+
+  hardInputChange = e => {
+    console.log("HARDVALUE", this.props.user)  
+    this.setState({
+      hardValue: e.target.checked
+    })
+  }
+
 
   handleSubmit = e => {
     e.preventDefault()
@@ -27,7 +38,8 @@ class Skillform extends React.Component {
       body: JSON.stringify({
         user_id: this.props.user.id,
         name: this.state.skillValue,
-        target: this.state.targetValue
+        target: this.state.targetValue,
+        hard: this.state.hardValue
       })
     })
       .then(res => {
@@ -51,6 +63,7 @@ class Skillform extends React.Component {
           <div className="skilldiv2">
             <h3 className="skillform-titles">Enter a Skill:</h3>
           </div>
+          {/* ------------CHOOSE SKILL INPUT--------- */}
           <input
             className="skillinput"
             onChange={this.handleInputChange}
@@ -62,15 +75,16 @@ class Skillform extends React.Component {
           <div className="skilldiv2">
             <h3 className="skillform-titles">Target Hours Daily:</h3>
           </div>
+          {/* ------------NUMBER TARGET HOURS SELECTOR--------- */}
           <div className="numarrows">
             <input
               onChange={this.handleInputChange}
               type="number"
               name="targetValue"
               className="hourselect"
-              min="0"
+              min="1"
               max="24"
-              placeholder="0"
+              placeholder="1"
               value={this.state.targetValue}
             />
           </div>
@@ -79,14 +93,23 @@ class Skillform extends React.Component {
             <h3 className="skillform-titles">Difficulty</h3>
           </div>
           <div>
-            <select className="dropdown">
-              <option value="volvo">EASY</option>
-              <option value="saab">HARD</option>
-            </select>
+            {/* ------------DIFFICULTY CHECKBOX--------- */}
+            <label>
+              <input
+                type="checkbox"
+                value={this.state.hardValue}
+                checked={this.state.hardValue}
+                onChange={this.hardInputChange}
+              />
+              <span className="hardtitle">HARD</span>
+            </label>
           </div>
           <br />
-          <button className="button fancy-button skillsubmit" type="submit">
-            ADD
+          <button
+            className="button fancy-button skillsubmit addbutton"
+            type="submit"
+          >
+            Add Skill
           </button>
         </form>
       </div>
