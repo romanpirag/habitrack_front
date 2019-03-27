@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-import {withRouter } from "react-router-dom"
+import { withRouter } from "react-router-dom"
+import SkillStatus from "./SkillStatus"
 
 class DayInfo extends Component {
   state = {
@@ -70,25 +71,17 @@ class DayInfo extends Component {
     })
   }
 
- // TODO!! 
-//   getDaySkills = () => {
-//     console.log("getDaySkills")
-
-//     return this.state.day.dayskills.map(ds => {
-//       let theSkill = this.state.day.skills.find(s => (s.id = ds.id))
-//       ds.skill_name = theSkill.name
-//       ds.actual_time = theSkill.actual_time
-//       console.log(ds)
-//       return (
-//         <>
-//           <div>
-//             <h3>Skill name: {ds.skill_name}</h3>
-//             <h5>Actual time: {ds.actual_time}</h5>
-//           </div>
-//         </>
-//       )
-//     })
-//   }
+  // TODO!!
+  getDaySkills = () => {
+    return this.state.day.dayskills
+      .sort((a, b) => a.id - b.id)
+      .map(ds => {
+        let theSkill = this.state.day.skills.find(s => s.id === ds.skill_id)
+        ds.skill_name = theSkill.name
+        return <SkillStatus key={ds.id} ds={ds} />
+      })
+      
+  }
 
   render() {
     if (!this.state.day.id) {
@@ -98,6 +91,7 @@ class DayInfo extends Component {
       <>
         <div className="page-title">
           <h1 className="dayinfo-all">{this.state.day.name}</h1>
+          <div className="day-dayskills">{this.getDaySkills()}</div>
           <h1 className="journal-title">Share Your Feeings!</h1>
           <form onSubmit={this.submitHandle}>
             <textarea
@@ -114,7 +108,7 @@ class DayInfo extends Component {
           </form>
         </div>
 
-        {/* <div className="day-dayskills">{this.getDaySkills()}</div> */}
+     
 
         {/* <Link className="button" to={"/mainpage"}>
           Back

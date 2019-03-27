@@ -582,6 +582,29 @@ main {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+.dropdown {
+  border: 0;
+  margin-top: 15px;
+  font-size: 2rem;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  width: 100px;
+  height: 50px;
+}
+
+.skillselect-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: left;
+}
+
+.skillcollection {
+  position: fixed;
+  right: 0;
+  width: 50%;
+}
+
 .skillsubmit {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -733,6 +756,11 @@ main {
   animation-timing-function: linear;
 }
 
+/* Skill status */
+
+.skill-status {
+  color: white;
+}
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @keyframes wiggle {
@@ -768,6 +796,18 @@ main {
   }
 }
 
+@keyframes wiggle {
+  0% {
+    transform: translate(2px, 0);
+  }
+  50% {
+    transform: translate(-2px, 0);
+  }
+  100% {
+    transform: translate(2px, 0);
+  }
+}
+
 @keyframes shake {
   0% {
     transform: rotate(0.5deg);
@@ -797,29 +837,5 @@ main {
     text-shadow: 0 0 5px rgb(255, 144, 41), 0 0 20px #ffb560, 0 0 30px;
   }
 }
+
 /* ---------------------------------------------------------------------------------- */
-
-.glitch {
-  position: relative;
-}
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@keyframes wiggle {
-  0% {
-    transform: translate(2px, 0);
-  }
-  50% {
-    transform: translate(-2px, 0);
-  }
-  100% {
-    transform: translate(2px, 0);
-  }
-}

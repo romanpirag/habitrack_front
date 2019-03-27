@@ -137,14 +137,14 @@ class App extends React.Component {
               href="https://github.com/romabot"
               target="_blank"
             >
-              <i class="fab fa-github-square" />
+              <i className="fab fa-github-square" />
             </a>
             <a
               className="linkedin-link"
               href="https://www.linkedin.com/in/roma-pirag-690979172/"
               target="_blank"
             >
-              <i class="fab fa-linkedin" />
+              <i className="fab fa-linkedin" />
             </a>
             <h1 className="copyright">
               &copy; ROMABot all rights reserved 2019

@@ -75,6 +75,16 @@ class Skillform extends React.Component {
             />
           </div>
           <br />
+          <div className="skilldiv2">
+            <h3 className="skillform-titles">Difficulty</h3>
+          </div>
+          <div>
+            <select className="dropdown">
+              <option value="volvo">EASY</option>
+              <option value="saab">HARD</option>
+            </select>
+          </div>
+          <br />
           <button className="button fancy-button skillsubmit" type="submit">
             ADD
           </button>

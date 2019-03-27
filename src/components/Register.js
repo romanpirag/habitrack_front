@@ -30,13 +30,21 @@ class Register extends Component {
           password: this.state.passwordValue
         }
       })
+    }).then(res => {
+      if (!res.ok) {
+        throw Error(`Can't Register... username must be unique`)
+      } else {
+        return res.json()
+      }
     })
-      .then(res => res.json())
       .then(data => {
         localStorage.setItem("jwt", data.jwt)
         this.props.getUser(data.user)
         this.props.history.push("/mainpage")
+      }).catch(err => {
+        alert(err)
       })
+      
   }
 
   render() {
