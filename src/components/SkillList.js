@@ -8,18 +8,18 @@ class SkillList extends React.Component {
     return this.props.skills
       ? this.props.skills.map(skill => (
           <div key={skill.id} className="skilllist-div">
-            <h4 className="skilllist" key={skill.id}>
-              ⭕️ {skill.name}{" "}
-              <span className="target">Target: {skill.target}hrs</span>
-              <span className="difficulty-rating">
-                {" "}
-                {skill.hard ? (
-                  <span className="hardsmash">HARD</span>
-                ) : (
-                  <span className="easysmash">EASY</span>
-                )}
-              </span>{" "}
-            </h4>
+            <span className="target">⭕️ {skill.target}hrs</span>
+            <span className="difficulty-rating">
+              {" "}
+              {skill.hard ? (
+                <span className="hardsmash">HARD</span>
+              ) : (
+                <span className="easysmash">EASY</span>
+              )}
+            </span>{" "}
+            <span className="skilllist skillname-add" key={skill.id}>
+              {skill.name}{" "}
+            </span>
           </div>
         ))
       : null

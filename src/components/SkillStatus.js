@@ -50,18 +50,19 @@ class SkillStatus extends React.Component {
     return (
       <div className="skill-status">
         <div className="form-check">
-         {/* ------------COMPLETED CHECKBOX--------- */}
+          {/* ------------COMPLETED CHECKBOX--------- */}
           <label>
-            <span className="skilllist-end">{this.props.ds.skill_name}</span>
-        {/* <h5>Difficulty: {this.props.ds.hard ? "HARD" : "EASY"} </h5> */}
             <input
-              className="happycheck"
               type="checkbox"
               value={this.state.completed}
               checked={this.state.completed}
               onChange={this.onChangeHandle}
             />
-            Completed {!this.state.completed}
+            <span className="skill-completed-word"> Completed</span> {!this.state.completed}
+            <span className="skilllist-end">
+              {this.props.ds.skill_name}
+            </span>
+            {/* <h5>Difficulty: {this.props.ds.hard ? "HARD" : "EASY"} </h5> */}
           </label>
         </div>
       </div>

@@ -91,9 +91,11 @@ class DayInfo extends Component {
       <>
         <div className="page-title">
           <h1 className="dayinfo-all">{this.state.day.name}</h1>
+          <div className="skillday-info">
           <div className="day-dayskills">{this.getDaySkills()}</div>
+          </div>
           <h1 className="journal-title">Share Your Feeings!</h1>
-          <form onSubmit={this.submitHandle}>
+          <form className="journal-form" onSubmit={this.submitHandle}>
             <textarea
               onChange={this.onChangeHandle}
               rows="10"
@@ -102,8 +104,8 @@ class DayInfo extends Component {
               placeholder="<---------Type here!"
             />
             <br />
-            <button className="button fancy-button" type="submit">
-              !! DAY COMPLETED !!
+            <button className="button fancy-button daycompleted" type="submit">
+              !! PRESS TO FINISH THE DAY !!
             </button>
           </form>
         </div>

@@ -7,10 +7,10 @@ class SkillCard extends Component {
         return (
           <>
             <h2 className="singleskill">
-              {this.props.skill.name}
               <span className="skilltarget">
                 {" "}
-                Target: {this.props.skill.target}hrs
+                ⭕️
+                {this.props.skill.target}hrs
               </span>
               <span>
                 {" "}
@@ -20,6 +20,7 @@ class SkillCard extends Component {
                   <span className="easysmash">EASY</span>
                 )}
               </span>
+              <span className="skillsmash">{this.props.skill.name}</span>
             </h2>
           </>
         )
