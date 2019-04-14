@@ -44,7 +44,6 @@ class Routine extends React.Component {
     return (
       <>
         <form className="skill-routine-table" onSubmit={this.handleSubmit}>
-          */}
           <br />
           <div className="skilldiv2 numdays">
             <h3 className="skillform-titles">Number of Days</h3>

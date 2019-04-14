@@ -27,14 +27,14 @@ class SkillSelect extends React.Component {
       .then(skills => this.setState({ skills }))
   }
   componentDidMount() {
-    console.log("USER", this.props.user)
+    
     if (this.props.user.id) {
       this.getSkillsData()
     }
   }
 
   componentDidUpdate(prevProps) {
-    console.log("didupdate", prevProps)
+    
     if (this.props.user.id !== prevProps.user.id) {
       this.getSkillsData()
     }

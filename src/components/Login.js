@@ -24,7 +24,6 @@ class Login extends Component {
   }
 
   handleSubmit = e => {
-    console.log("cheeseburger")
     e.preventDefault()
     fetch("https://habitrack-api.herokuapp.com/api/v1/login", {
       method: "POST",

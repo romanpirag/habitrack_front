@@ -35,7 +35,7 @@ class SkillList extends React.Component {
         <div className="skilldiv2">
           <h3 className="your-daily-routine">YOUR DAILY ROUTINE</h3>
         </div>
-        <br />>
+        <br/>
         <div className="skilldiv2">
           <div className="yourskills">{this.mappedSkills()}</div>
         </div>

@@ -136,6 +136,7 @@ class App extends React.Component {
               className="gitlink"
               href="https://github.com/romabot"
               target="_blank"
+              rel="noopener noreferrer" 
             >
               <i className="fab fa-github-square" />
             </a>
@@ -143,6 +144,7 @@ class App extends React.Component {
               className="linkedin-link"
               href="https://www.linkedin.com/in/roma-pirag-690979172/"
               target="_blank"
+              rel="noopener noreferrer" 
             >
               <i className="fab fa-linkedin" />
             </a>
