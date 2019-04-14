@@ -17,15 +17,16 @@ class Login extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.user.id !== prevProps.user.id) {        //<-----checkes if previous prop.user.id is the same as new props.user.id
-      this.props.history.push("/mainpage")             //<--- Doing this so that we don't call this.getDays without a user id. 
+    if (this.props.user.id !== prevProps.user.id) {
+      //<-----checkes if previous prop.user.id is the same as new props.user.id
+      this.props.history.push("/mainpage") //<--- Doing this so that we don't call this.getDays without a user id.
     }
   }
 
   handleSubmit = e => {
     console.log("cheeseburger")
     e.preventDefault()
-    fetch("http://localhost:3000/api/v1/login", {
+    fetch("https://habitrack-api.herokuapp.com/api/v1/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -59,31 +60,30 @@ class Login extends Component {
 
   render() {
     return (
-        <form className="logform" onSubmit={this.handleSubmit}>
-          <input
-            id="logname"
-            type="text"
-            placeholder="Username"
-            name="usernameValue"
-            value={this.state.usernameValue}
-            onChange={this.handleInputChange}
-            required
-          />
-          <br />
-          <input
-            id="logpass"
-            type="password"
-            name="passwordValue"
-            value={this.state.passwordValue}
-            placeholder="Password"
-            onChange={this.handleInputChange}
-            required
-          />
-          <br />
-          <input className="logsubmit" type="submit" value="Enter" />
-          <br />
-        
-        </form>
+      <form className="logform" onSubmit={this.handleSubmit}>
+        <input
+          id="logname"
+          type="text"
+          placeholder="Username"
+          name="usernameValue"
+          value={this.state.usernameValue}
+          onChange={this.handleInputChange}
+          required
+        />
+        <br />
+        <input
+          id="logpass"
+          type="password"
+          name="passwordValue"
+          value={this.state.passwordValue}
+          placeholder="Password"
+          onChange={this.handleInputChange}
+          required
+        />
+        <br />
+        <input className="logsubmit" type="submit" value="Enter" />
+        <br />
+      </form>
     )
   }
 }

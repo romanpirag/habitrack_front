@@ -8,15 +8,15 @@ class SkillSelect extends React.Component {
     skills: []
   }
 
-  updateSkills = (skill) => {
+  updateSkills = skill => {
     this.setState({
       skills: [...this.state.skills, skill]
     })
   }
 
   getSkillsData = () => {
-    fetch(`http://localhost:3000/api/v1/skills`, {
-      // fetch(`http://localhost:3000/api/v1/user/${this.props.user.id}/skills`, {
+    fetch(`https://habitrack-api.herokuapp.com/api/v1/skills`, {
+      // fetch(`https://habitrack-api.herokuapp.com/api/v1/user/${this.props.user.id}/skills`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -32,7 +32,7 @@ class SkillSelect extends React.Component {
       this.getSkillsData()
     }
   }
-  
+
   componentDidUpdate(prevProps) {
     console.log("didupdate", prevProps)
     if (this.props.user.id !== prevProps.user.id) {

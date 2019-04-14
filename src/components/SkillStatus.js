@@ -7,11 +7,11 @@ class SkillStatus extends React.Component {
   }
 
   componentDidMount() {
-      if (this.props.ds.completed) {
-          this.setState({
-              completed: true
-          })
-      }
+    if (this.props.ds.completed) {
+      this.setState({
+        completed: true
+      })
+    }
   }
   onChangeHandle = e => {
     this.setState(
@@ -19,17 +19,22 @@ class SkillStatus extends React.Component {
         completed: e.target.checked
       },
       () => {
-        fetch(`http://localhost:3000/api/v1/dayskills/${this.props.ds.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-            Authorization: `Bearer: ${localStorage.getItem("jwt")}`
-          },
-          body: JSON.stringify({
-            completed: this.state.completed
-          })
-        })
+        fetch(
+          `https://habitrack-api.herokuapp.com/api/v1/dayskills/${
+            this.props.ds.id
+          }`,
+          {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              Authorization: `Bearer: ${localStorage.getItem("jwt")}`
+            },
+            body: JSON.stringify({
+              completed: this.state.completed
+            })
+          }
+        )
           .then(res => {
             if (!res.ok) {
               throw Error("error...", res.statusText)
@@ -58,10 +63,9 @@ class SkillStatus extends React.Component {
               checked={this.state.completed}
               onChange={this.onChangeHandle}
             />
-            <span className="skill-completed-word"> Completed</span> {!this.state.completed}
-            <span className="skilllist-end">
-              {this.props.ds.skill_name}
-            </span>
+            <span className="skill-completed-word"> Completed</span>{" "}
+            {!this.state.completed}
+            <span className="skilllist-end">{this.props.ds.skill_name}</span>
             {/* <h5>Difficulty: {this.props.ds.hard ? "HARD" : "EASY"} </h5> */}
           </label>
         </div>

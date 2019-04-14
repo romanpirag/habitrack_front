@@ -12,7 +12,7 @@ class DayInfo extends Component {
   dayId = this.props.match.params.id
 
   componentDidMount = () => {
-    fetch(`http://localhost:3000/api/v1/days/${this.dayId}`, {
+    fetch(`https://habitrack-api.herokuapp.com/api/v1/days/${this.dayId}`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -36,7 +36,7 @@ class DayInfo extends Component {
 
   submitHandle = e => {
     e.preventDefault()
-    fetch(`http://localhost:3000/api/v1/days/${this.dayId}`, {
+    fetch(`https://habitrack-api.herokuapp.com/api/v1/days/${this.dayId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +80,6 @@ class DayInfo extends Component {
         ds.skill_name = theSkill.name
         return <SkillStatus key={ds.id} ds={ds} />
       })
-      
   }
 
   render() {
@@ -92,7 +91,7 @@ class DayInfo extends Component {
         <div className="page-title">
           <h1 className="dayinfo-all">{this.state.day.name}</h1>
           <div className="skillday-info">
-          <div className="day-dayskills">{this.getDaySkills()}</div>
+            <div className="day-dayskills">{this.getDaySkills()}</div>
           </div>
           <h1 className="journal-title">Share Your Feeings!</h1>
           <form className="journal-form" onSubmit={this.submitHandle}>
@@ -109,8 +108,6 @@ class DayInfo extends Component {
             </button>
           </form>
         </div>
-
-     
 
         {/* <Link className="button" to={"/mainpage"}>
           Back

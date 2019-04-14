@@ -18,7 +18,7 @@ class Register extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    fetch("http://localhost:3000/api/v1/register", {
+    fetch("https://habitrack-api.herokuapp.com/api/v1/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -30,21 +30,22 @@ class Register extends Component {
           password: this.state.passwordValue
         }
       })
-    }).then(res => {
-      if (!res.ok) {
-        throw Error(`Can't Register... username must be unique`)
-      } else {
-        return res.json()
-      }
     })
+      .then(res => {
+        if (!res.ok) {
+          throw Error(`Can't Register... username must be unique`)
+        } else {
+          return res.json()
+        }
+      })
       .then(data => {
         localStorage.setItem("jwt", data.jwt)
         this.props.getUser(data.user)
         this.props.history.push("/mainpage")
-      }).catch(err => {
+      })
+      .catch(err => {
         alert(err)
       })
-      
   }
 
   render() {
@@ -74,11 +75,7 @@ class Register extends Component {
             required
           />
           <br />
-          <button
-            className="button signup-submit"
-            type="submit"
-            value="submit"
-          >
+          <button className="button signup-submit" type="submit" value="submit">
             submit
           </button>
           <br />

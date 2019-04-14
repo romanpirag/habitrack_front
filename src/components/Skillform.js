@@ -7,7 +7,7 @@ class Skillform extends React.Component {
     targetValue: 1,
     hardValue: false
   }
-  
+
   state = this.defaultState
 
   handleInputChange = e => {
@@ -19,16 +19,15 @@ class Skillform extends React.Component {
   }
 
   hardInputChange = e => {
-    console.log("HARDVALUE", this.props.user)  
+    console.log("HARDVALUE", this.props.user)
     this.setState({
       hardValue: e.target.checked
     })
   }
 
-
   handleSubmit = e => {
     e.preventDefault()
-    fetch("http://localhost:3000/api/v1/skills", {
+    fetch("https://habitrack-api.herokuapp.com/api/v1/skills", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
