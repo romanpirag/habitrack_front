@@ -18,7 +18,7 @@ class Login extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.user.id !== prevProps.user.id) {
-      //<-----checkes if previous prop.user.id is the same as new props.user.id
+      //<-----checks if previous prop.user.id is the same as new props.user.id
       this.props.history.push("/mainpage") //<--- Doing this so that we don't call this.getDays without a user id.
     }
   }

@@ -27,7 +27,6 @@ class SkillSelect extends React.Component {
       .then(skills => this.setState({ skills }))
   }
   componentDidMount() {
-    
     if (this.props.user.id) {
       this.getSkillsData()
     }
