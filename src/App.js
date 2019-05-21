@@ -149,7 +149,7 @@ class App extends React.Component {
               <i className="fab fa-linkedin" />
             </a>
             <h1 className="copyright">
-              &copy; RomanPirag all rights reserved 2019
+              &copy; Roma all rights reserved 2019
             </h1>
           </div>
         </footer>
