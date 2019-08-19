@@ -30,7 +30,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://habitrack-api.herokuapp.com/api/v1/profile", {
+    fetch("https://habitrack-backend.herokuapp.com/api/v1/profile", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
