@@ -16,7 +16,7 @@ class MainPage extends React.Component {
   // ------------------FETCHES USERS DAYS---------------------------
 
   getDays = userId => {
-    fetch(`https://habitrack-api.herokuapp.com/api/v1/users/${userId}/days`, {
+    fetch(`https://habitrack-backend.herokuapp.com/api/v1/users/${userId}/days`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",

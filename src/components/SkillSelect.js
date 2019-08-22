@@ -15,8 +15,8 @@ class SkillSelect extends React.Component {
   }
 
   getSkillsData = () => {
-    fetch(`https://habitrack-api.herokuapp.com/api/v1/skills`, {
-      // fetch(`https://habitrack-api.herokuapp.com/api/v1/user/${this.props.user.id}/skills`, {
+    fetch(`https://habitrack-backend.herokuapp.com/api/v1/skills`, {
+      // fetch(`https://habitrack-backend.herokuapp.com/api/v1/user/${this.props.user.id}/skills`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",

@@ -12,7 +12,7 @@ class DayInfo extends Component {
   dayId = this.props.match.params.id
 
   componentDidMount = () => {
-    fetch(`https://habitrack-api.herokuapp.com/api/v1/days/${this.dayId}`, {
+    fetch(`https://habitrack-backend.herokuapp.com/api/v1/days/${this.dayId}`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -36,7 +36,7 @@ class DayInfo extends Component {
 
   submitHandle = e => {
     e.preventDefault()
-    fetch(`https://habitrack-api.herokuapp.com/api/v1/days/${this.dayId}`, {
+    fetch(`https://habitrack-backend.herokuapp.com/api/v1/days/${this.dayId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

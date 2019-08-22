@@ -20,7 +20,7 @@ class SkillStatus extends React.Component {
       },
       () => {
         fetch(
-          `https://habitrack-api.herokuapp.com/api/v1/dayskills/${
+          `https://habitrack-backend.herokuapp.com/api/v1/dayskills/${
             this.props.ds.id
           }`,
           {

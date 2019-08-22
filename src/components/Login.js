@@ -25,7 +25,7 @@ class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    fetch("https://habitrack-api.herokuapp.com/api/v1/login", {
+    fetch("https://habitrack-backend.herokuapp.com/api/v1/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

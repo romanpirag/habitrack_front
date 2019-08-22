@@ -9,7 +9,7 @@ class Routine extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    fetch("https://habitrack-api.herokuapp.com/api/v1/dayskills", {
+    fetch("https://habitrack-backend.herokuapp.com/api/v1/dayskills", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

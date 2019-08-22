@@ -79,9 +79,7 @@ class App extends React.Component {
 
           {this.state.user.username ? (
             <div className="user-info">
-              <span className="welcomename">
-                {this.state.user.username}
-              </span>
+              <span className="welcomename">{this.state.user.username}</span>
               <span onClick={this.logout} className="isloggedin logout">
                 {" "}
                 EXIT
@@ -136,7 +134,7 @@ class App extends React.Component {
               className="gitlink"
               href="https://github.com/romabot"
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
             >
               <i className="fab fa-github-square" />
             </a>
@@ -144,13 +142,11 @@ class App extends React.Component {
               className="linkedin-link"
               href="https://www.linkedin.com/in/roma-pirag-690979172/"
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
             >
               <i className="fab fa-linkedin" />
             </a>
-            <h1 className="copyright">
-              &copy; Roma all rights reserved 2019
-            </h1>
+            <h1 className="copyright">&copy; Roma all rights reserved 2019</h1>
           </div>
         </footer>
       </div>

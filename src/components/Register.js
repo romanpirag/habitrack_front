@@ -18,7 +18,7 @@ class Register extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    fetch("https://habitrack-api.herokuapp.com/api/v1/register", {
+    fetch("https://habitrack-backend.herokuapp.com/api/v1/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
