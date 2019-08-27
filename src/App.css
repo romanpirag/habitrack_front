@@ -140,11 +140,19 @@ input[type="password"] {
   border-radius: 10px;
   width: 110px;
   height: 37px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   margin: 5px auto;
 }
+
+@media (min-width: 500px) {
+  input[type="text"],
+  input[type="password"] {
+    font-size: 1.5rem;
+  }
+}
+
 input:hover {
   /* ----Fast ScaleBox--- */
   transform: scale(1.1);
@@ -561,19 +569,19 @@ main {
 
 #logname {
   width: 100px;
-  margin: 10px;
+  margin: 5px;
 }
 
 #logpass {
   width: 100px;
-  margin: 10px;
+  margin: 5px;
 }
 
 @media (min-width: 770px) {
   #logname,
   #logpass {
     width: 200px;
-    margin: 10px;
+    margin: 5px;
   }
 }
 
