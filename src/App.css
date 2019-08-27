@@ -96,11 +96,10 @@ button:hover,
 }
 
 .signup-button {
-  width: 10px;
-  height: 10px;
-  min-width: 130px;
+  min-width: 100px;
   border: 2px solid rgb(0, 225, 255);
-
+  height: 50px;
+  font-size: 200%;
   border-radius: 10%;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
@@ -110,9 +109,7 @@ button:hover,
   box-shadow: 5px 10px 6px #000000;
   border-radius: 10px;
   background: black;
-  font-size: 45px;
 
-  height: 65px;
   animation: pulse 1.5s infinite;
   animation-timing-function: linear;
   margin-top: 30px;
@@ -417,6 +414,12 @@ main {
   }
 }
 
+@media (min-height: 1366px) {
+  main {
+    margin-top: 400px;
+  }
+}
+
 /* HOMEPAGE */
 
 .tagline {
@@ -470,6 +473,18 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 4s infinite linear;
   margin-top: -5px;
+}
+
+@media (min-height: 1024px) {
+  .LOGOsmall {
+    margin-top: 8px;
+  }
+}
+
+@media (min-height: 1366px) {
+  .LOGOsmall {
+    margin-top: 30px;
+  }
 }
 
 @media (min-width: 600px) {
@@ -535,14 +550,21 @@ main {
 .logsubmit {
   color: rgb(0, 225, 255);
   border-radius: 10px;
-  height: 50px;
+  height: 40px;
+  font-size: 160%;
   margin: 10px;
 
-  font-size: 200%;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   background: black;
   border: 2px solid rgb(18, 219, 219);
+}
+
+@media (min-width: 500px) {
+  .logsubmit {
+    height: 50px;
+    font-size: 200%;
+  }
 }
 
 #register-field {
