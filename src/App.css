@@ -36,7 +36,7 @@ a {
 }
 
 a:link {
-  color: rgb(255, 163, 78);
+  color: rgb(0, 225, 255);
 }
 
 a:visited {
@@ -58,7 +58,7 @@ hr {
   padding: 5px 10px;
   border-radius: 25%;
   color: black;
-  border-radius: 15px;
+  border-radius: 10px;
   height: 46px;
   font-size: 200%;
   font-family: "Amatic SC", cursive;
@@ -80,7 +80,7 @@ button:hover,
 
 .fancy-button,
 .fancy-button:visited {
-  border-radius: 25px;
+  border-radius: 10px;
   background: black;
   font-size: 50px;
   color: rgb(0, 225, 255);
@@ -93,24 +93,23 @@ button:hover,
 }
 
 .signup-button {
-  width: 10%;
-  min-width: 100px;
+  width: 10px;
+  height: 10px;
+  min-width: 130px;
   border: 2px solid rgb(0, 225, 255);
-  padding: 2px 5px;
-  border-radius: 25%;
+
+  border-radius: 10%;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   display: inline-block;
   line-height: 1.25;
-  text-align: center;
   cursor: pointer;
   box-shadow: 5px 10px 6px #000000;
-
-  border-radius: 25px;
+  border-radius: 10px;
   background: black;
-  font-size: 50px;
+  font-size: 45px;
 
-  height: 62px;
+  height: 65px;
   animation: pulse 1.5s infinite;
   animation-timing-function: linear;
   margin-top: 30px;
@@ -135,7 +134,7 @@ button:hover,
 
 input[type="text"],
 input[type="password"] {
-  border-radius: 15px;
+  border-radius: 10px;
   width: 110px;
   height: 37px;
   font-size: 1.5rem;
@@ -152,7 +151,7 @@ input:hover {
 textarea {
   background: transparent;
   border: 1px solid transparent;
-  border-radius: 20px;
+  border-radius: 10px;
   color: white;
   font-size: 2rem;
   font-family: "Amatic SC", cursive;
@@ -512,7 +511,7 @@ main {
 
 .logsubmit {
   color: rgb(0, 225, 255);
-  border-radius: 15px;
+  border-radius: 10px;
   height: 50px;
   margin: 10px;
 
@@ -620,7 +619,7 @@ main {
   display: flex;
   background: transparent;
   border: 1px solid rgb(0, 206, 178);
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 10px;
 }
 
@@ -637,7 +636,7 @@ main {
   /* box-shadow: 5px 10px; */
   font-family: "Amatic SC", cursive;
   font-weight: 700;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 38px;
   height: 38px;
   padding-left: 1rem;
@@ -647,7 +646,7 @@ main {
 .hourselect {
   /* box-shadow: 5px 10px; */
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: 10px;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   font-size: 50px;
@@ -674,7 +673,7 @@ input[type="checkbox"] {
   width: 25px;
   height: 25px;
   background: rgb(255, 255, 255);
-  border-radius: 15px;
+  border-radius: 10px;
   border: 2px solid rgb(0, 0, 0);
   outline: none;
   margin-top: 10px;
@@ -699,7 +698,7 @@ input[type="checkbox"]:checked {
 .addbutton {
   width: 13%;
   height: 8%;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: -5px;
 }
 
@@ -846,7 +845,7 @@ input[type="checkbox"]:checked {
   background: transparent;
   border-style: solid;
   border-width: 2px;
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 10px;
   cursor: pointer;
   /* height: 100%; */
@@ -861,7 +860,7 @@ input[type="checkbox"]:checked {
 .skilldiv:hover {
   border-style: solid;
   border-width: 2px;
-  border-radius: 15px;
+  border-radius: 10px;
   /* ----Fast ScaleBox--- */
   transform: scale(1.1);
   transition: all ease 200ms;
@@ -878,7 +877,7 @@ input[type="checkbox"]:checked {
   width: 30%;
   border-style: solid;
   border-width: 2px;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-left: 35%;
   padding: 10px;
 }
@@ -904,7 +903,7 @@ input[type="checkbox"]:checked {
   border: 2px solid rgb(41, 255, 209);
   color: rgb(41, 255, 209);
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: 10px;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   font-size: 50px;
