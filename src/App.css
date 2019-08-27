@@ -328,8 +328,8 @@ header {
 
 .footer {
   display: flex;
-  justify-content: flex-end;
-  align-content: center;
+  justify-content: space-between;
+  align-items: center;
 
   color: white;
   position: fixed;
@@ -348,24 +348,21 @@ header {
   -webkit-animation: hue 4s infinite linear;
 }
 
+.linksdiv {
+
+}
+
 .copyright {
-  width: 96%;
-  height: 100px;
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
-  position: fixed;
+
 }
 
 @media (min-width: 350px) {
   .copyright {
-    margin-top: -7px;
   }
 }
 
 @media (min-width: 770px) {
   .copyright {
-    width: 98.5%;
   }
 }
 

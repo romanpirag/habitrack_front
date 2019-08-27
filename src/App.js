@@ -129,27 +129,30 @@ class App extends React.Component {
           </Switch>
         </main>
         <footer className="footer">
-          <a
-            className="gitlink"
-            href="https://github.com/romanpirag"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-github-square" />
-          </a>
+          <div className="linksdiv">
+            <a
+              className="gitlink"
+              href="https://github.com/romanpirag"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-github-square" />
+            </a>
 
-          <a
-            className="linkedin-link"
-            href="https://www.linkedin.com/in/romanpirag/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-linkedin" />
-          </a>
+            <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/romanpirag/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-linkedin" />
+            </a>
+          </div>
 
           <div className="copyright">
-            <h1>&copy; Roma all rights reserved 2019</h1>
+            <h1>&copy; Roma 2019</h1>
           </div>
+
         </footer>
       </div>
     )
