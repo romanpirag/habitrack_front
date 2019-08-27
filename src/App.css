@@ -2,11 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700");
 /* -------------------------------------------------------------------------------------- */
 
-
 * {
   box-sizing: border-box;
 }
-
 
 html {
   font-size: 18px;
@@ -27,8 +25,13 @@ body {
 h1 {
   text-align: center;
   color: rgb(0, 247, 255);
-  font-size: 4rem;
-  margin: 2rem auto;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 350px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
 a {
@@ -313,44 +316,60 @@ header {
 /* FOOTER */
 
 .footer {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+
   color: white;
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-size: 300%;
+
+  font-size: 2.2rem;
   height: 50px;
   background: black;
   border-top: 2px solid rgb(6, 205, 255);
   box-shadow: 0px -10px 10px #000000;
   cursor: default;
+  padding: 0 10px 0 10px;
 
   color: #f35626;
   -webkit-animation: hue 4s infinite linear;
 }
 
 .copyright {
-  font-size: 1.8rem;
+  width: 96%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
   position: fixed;
-  margin-top: 0.5%;
-  padding-left: 15px;
 }
 
-.gitlink {
-  margin-left: 95%;
-  font-size: 77%;
-}
-
-.linkedin-link {
-  margin-left: -20%;
-  font-size: 77%;
-}
-
-@media (min-width: 600px) {
-  .linkedin-link {
-    margin: 0;
-    margin-left: -80px;
+@media (min-width: 350px) {
+  .copyright {
+    margin-top: -7px;
   }
 }
+
+@media (min-width: 770px) {
+  .copyright {
+    width: 98.5%;
+  }
+}
+
+.linkedin-link,
+.gitlink {
+  margin: 2px;
+}
+
+/* @media (min-width: 500px) {
+  .copyright {
+    font-size: 1.8rem;
+    position: fixed;
+   
+  }
+} */
 
 /* APP */
 
@@ -380,15 +399,14 @@ main {
 
 @media (min-width: 770px) {
   main {
-  margin-top: 100px;
+    margin-top: 160px;
+  }
 }
-}
-
 
 @media (min-width: 1000px) {
   main {
-  margin-top: 80px;
-}
+    margin-top: 80px;
+  }
 }
 
 /* HOMEPAGE */
@@ -480,9 +498,6 @@ main {
 
 /* LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN------------ */
 
-
-
-
 .logtitle {
   color: rgb(1, 247, 255);
   font-size: 300%;
@@ -544,10 +559,6 @@ main {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-.footer-div {
-  display: flex;
-}
-
 #logname {
   width: 100px;
   margin: 10px;
@@ -559,7 +570,8 @@ main {
 }
 
 @media (min-width: 770px) {
-  #logname,#logpass {
+  #logname,
+  #logpass {
     width: 200px;
     margin: 10px;
   }
