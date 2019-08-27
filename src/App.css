@@ -186,8 +186,16 @@ header {
   z-index: 1;
   width: 100%;
   justify-content: space-between;
-  height: 10%;
+  height: 20%;
 }
+
+@media (min-height: 500px){
+  header {
+    height: 12%;
+  }
+}
+
+
 
 .maintitle {
   font-size: 240%;
@@ -465,33 +473,33 @@ main {
 
 .LOGOsmall {
   display: none;
-  max-width: 190px;
-  min-width: 70px;
+  max-width: 200px;
+  width: 100%;
   color: #f35626;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 4s infinite linear;
-  margin-top: -5px;
+
 }
 
 @media (min-height: 1024px) {
   .LOGOsmall {
-    margin-top: 8px;
+    max-width: 300px;
+    
   }
 }
 
 @media (min-height: 1366px) {
   .LOGOsmall {
-    margin-top: 30px;
+     max-width: 400px;
+
   }
 }
 
 @media (min-width: 600px) {
   .LOGOsmall {
     display: block;
-    max-width: 190px;
-    min-width: 70px;
     color: #f35626;
     background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
     -webkit-background-clip: text;
@@ -502,14 +510,15 @@ main {
 
 .maintitle-div {
   display: none;
-  width: 200px;
+  width: 100%;
   margin-top: -10px;
   margin-bottom: -10px;
 }
 
 @media (min-width: 600px) {
   .maintitle-div {
-    display: block;
+    display: flex;
+    
   }
 }
 
