@@ -87,6 +87,7 @@ button:hover,
 
 .signup-button {
   width: 10%;
+  min-width: 100px;
   border: 2px solid rgb(0, 225, 255);
   padding: 2px 5px;
   border-radius: 25%;
@@ -368,7 +369,20 @@ header {
 main {
   margin: 10px;
   margin-bottom: 3%;
+  margin-top: 200px;
+}
+
+@media (min-width: 770px) {
+  main {
+  margin-top: 100px;
+}
+}
+
+
+@media (min-width: 1000px) {
+  main {
   margin-top: 80px;
+}
 }
 
 /* HOMEPAGE */
