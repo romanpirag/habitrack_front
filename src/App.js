@@ -131,7 +131,7 @@ class App extends React.Component {
         <footer className="footer">
           <a
             className="gitlink"
-            href="https://github.com/romabot"
+            href="https://github.com/romanpirag"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -140,7 +140,7 @@ class App extends React.Component {
 
           <a
             className="linkedin-link"
-            href="https://www.linkedin.com/in/roma-pirag-690979172/"
+            href="https://www.linkedin.com/in/romanpirag/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -150,7 +150,6 @@ class App extends React.Component {
           <div className="copyright">
             <h1>&copy; Roma all rights reserved 2019</h1>
           </div>
-          
         </footer>
       </div>
     )
