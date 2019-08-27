@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700");
 /* -------------------------------------------------------------------------------------- */
 
+
+* {
+  box-sizing: border-box;
+}
+
+
 html {
   font-size: 18px;
 }
@@ -474,6 +480,9 @@ main {
 }
 
 /* LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN------------ */
+
+
+
 
 .logtitle {
   color: rgb(1, 247, 255);
