@@ -20,7 +20,7 @@ The skill / habit tracker and journal with style.
 
 • Responsive design using CSS GRID / FLEXBOX. Site works well on mobile devices. 
 
-☝️🤓 A project focused on a has many to many relationship and creating a stylish + responsive page. 
+☝️🤓 A project focused on a has many to many relationship and creating stylish + responsive pages. 
 
 ## Contact
 
