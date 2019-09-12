@@ -3,10 +3,14 @@
 
 # HABITRACK
 The skill / habit tracker and journal with style. 
-Choose habits you wish to learn. 
-Create a schedule. 
-Mark off completed tasks. 
-Write about your experiences in the journal. 
+
+• Choose habits you wish to learn. 
+
+• Create a schedule. 
+
+• Mark off completed tasks. 
+
+• Write about your experiences in the journal. 
 
 ## Production 
 
