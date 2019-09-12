@@ -1,5 +1,5 @@
 
-![Habitrack](https://i.imgur.com/a87UI96.png)
+![Habitrack](https://i.imgur.com/JkJmtH0.png)
 
 # HABITRACK
 The skill / habit tracker and journal with style. 
