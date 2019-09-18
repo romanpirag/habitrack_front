@@ -131,10 +131,11 @@ button:hover,
 }
 
 .signup-title {
-  margin-top: 240px;
-  margin-bottom: -5px; 
-  font-size: 3rem; 
+  margin-top: 200px;
+  margin-bottom: -5px;
+  font-size: 3rem;
 }
+
 
 /* FORMS */
 
@@ -606,7 +607,6 @@ main {
 
   cursor: default;
 }
-
 
 #logname {
   width: 100px;
