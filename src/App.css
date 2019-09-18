@@ -349,11 +349,9 @@ header {
 }
 
 .linksdiv {
-
 }
 
 .copyright {
-
 }
 
 @media (min-width: 350px) {
@@ -584,7 +582,13 @@ main {
 }
 
 #register-field {
-  width: 400px;
+  width: 250px;
+}
+
+@media (min-width: 500px) {
+  #register-field {
+    width: 350px;
+  }
 }
 
 .dayinfo-all {
