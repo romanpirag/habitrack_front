@@ -180,11 +180,13 @@ textarea {
   resize: none;
   outline: none;
 }
-/* textarea:focus {
-  border: 1px solid white;
-  border-radius: 20px;
-  
-} */
+
+@media (min-width: 700px) {
+  textarea {
+    font-size: 2rem;
+  }
+}
+
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* HEADER */
@@ -227,7 +229,6 @@ header {
   font-weight: 700;
   z-index: 2;
 }
-
 
 /* ----------------------------------------0000000000000------USERNAME TOP RIGHT */
 
@@ -493,7 +494,6 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 4s infinite linear;
 }
-
 
 @media (min-height: 1024px) {
   .LOGOsmall {
