@@ -229,10 +229,6 @@ header {
   z-index: 2;
 }
 
-.maintitle-div {
-  display: flex;
-  padding: 15px;
-}
 
 /* ----------------------------------------0000000000000------USERNAME TOP RIGHT */
 
@@ -283,12 +279,6 @@ header {
   font-weight: bold;
 }
 
-@media (min-width: 600px) {
-  .welcomename {
-    font-size: 3rem;
-  }
-}
-
 .welcomename:hover {
   /* ----Fast ScaleBox--- */
   /* transform: scale(1.1);
@@ -316,7 +306,7 @@ header {
 
 @media (min-width: 600px) {
   .isloggedin {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 0;
     margin-left: 16px;
     font-family: "Amatic SC", cursive;
@@ -396,7 +386,7 @@ header {
 }
 
 .app-header {
-  display: flex; 
+  display: flex;
   justify-content: flex-end;
   box-shadow: 0px 5px 10px #000000;
   padding: 5px;
@@ -495,8 +485,8 @@ main {
 }
 
 .LOGOsmall {
-  display: none;
-  max-width: 200px;
+  display: block;
+  max-width: 130px;
   width: 100%;
   color: #f35626;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
@@ -504,6 +494,7 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 4s infinite linear;
 }
+
 
 @media (min-height: 1024px) {
   .LOGOsmall {
@@ -517,34 +508,41 @@ main {
   }
 }
 
-@media (min-width: 600px) {
-  .LOGOsmall {
-    display: block;
-    color: #f35626;
-    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: hue 4s infinite linear;
-  }
-}
-
 .maintitle-div {
-  display: none;
+  display: flex;
+  align-items: center;
   width: 100%;
-  margin-top: -10px;
-  margin-bottom: -10px;
 }
 
 @media (min-width: 600px) {
   .maintitle-div {
     display: flex;
+    align-items: center;
   }
 }
 
 /* SHARED */
 
 .page-title {
- margin-top: -140px;
+  margin-top: -140px;
+}
+
+@media (min-width: 770px) {
+  .page-title {
+    margin-top: -90px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-title {
+    margin-top: -40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-title {
+    margin-top: 0;
+  }
 }
 
 /* LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN------------ */
@@ -653,9 +651,8 @@ main {
   }
 }
 
-
 .your-daily-habits {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-bottom: 15px;
   margin-top: 0;
   color: rgb(255, 196, 107);
@@ -665,6 +662,13 @@ main {
   animation: glow-orange 1s ease-in-out infinite alternate;
   cursor: default;
 }
+
+@media (min-width: 600px) {
+  .your-daily-habits {
+    font-size: 3rem;
+  }
+}
+
 .your-daily-routine {
   transform: rotate(2deg);
   margin: 0;
@@ -682,6 +686,9 @@ main {
   font-size: 30px;
   font-weight: 700;
   margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .daycompleted {
@@ -697,7 +704,19 @@ main {
   background: transparent;
   border: 1px solid rgb(0, 206, 178);
   border-radius: 10px;
-  margin: 10px;
+  margin: 5px;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .skilllist-div {
+    display: flex;
+    background: transparent;
+    border: 1px solid rgb(0, 206, 178);
+    border-radius: 10px;
+    margin: 5px;
+    width: 500px;
+  }
 }
 
 .skilllist-div:hover {
@@ -779,6 +798,24 @@ input[type="checkbox"]:checked {
   padding: -5px;
 }
 
+@media (min-width: 600px) {
+  .addbutton {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .addbutton {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .addbutton {
+    width: 35%;
+  }
+}
+
 .hardsmash {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -835,9 +872,6 @@ input[type="checkbox"]:checked {
   justify-content: center;
   align-content: center;
 }
-
-
-
 
 .skilllist-end {
   font-size: 2rem;
@@ -1005,6 +1039,24 @@ input[type="checkbox"]:checked {
 .create-routine-button {
   width: 80%;
   height: 10%;
+}
+
+@media (min-width: 600px) {
+  .create-routine-button {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .create-routine-button {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .create-routine-button {
+    width: 35%;
+  }
 }
 
 /* Skill status */
