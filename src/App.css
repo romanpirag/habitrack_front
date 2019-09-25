@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 20px;
 }
 body {
   /* background: url(https://jooinn.com/images/black-rock-background-2.jpg); */
@@ -91,14 +91,13 @@ button:hover,
   height: 70px;
   animation: pulse 1.5s infinite;
   animation-timing-function: linear;
-  margin-top: 30px;
+  margin-top: 10px;
   /* line-height: 1; */
 }
 
 .signup-button {
   min-width: 100px;
   border: 2px solid rgb(0, 225, 255);
-  height: 50px;
   font-size: 200%;
   border-radius: 10%;
   font-family: "Amatic SC", cursive;
@@ -169,14 +168,14 @@ input:hover {
 }
 
 textarea {
-  background: transparent;
+  background: rgba(43, 78, 131, 0.445);
   border: 1px solid transparent;
   border-radius: 10px;
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Amatic SC", cursive;
-  width: 50%;
-  height: 100px;
+  width: 100%;
+  height: 200px;
   font-weight: 700;
   resize: none;
   outline: none;
@@ -637,7 +636,7 @@ main {
   font-size: 4rem;
   margin-bottom: 15px;
   color: rgb(0, 247, 255);
-  margin-top: 0;
+  margin-top: 250px;
 
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -648,6 +647,18 @@ main {
 @media (min-width: 770px) {
   .your-daily {
     margin-top: 200px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .your-daily {
+    margin-top: 150px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .your-daily {
+    margin-top: 110px;
   }
 }
 
@@ -874,16 +885,16 @@ input[type="checkbox"]:checked {
 }
 
 .skilllist-end {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .skill-completed-word {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: rgb(255, 168, 97);
   margin-left: 10px;
-  margin-right: 40px;
+  margin-right: 10px;
 }
 
 .journal-form {
@@ -892,8 +903,8 @@ input[type="checkbox"]:checked {
 
 .skillday-info {
   display: flex;
+  justify-content: flex-start;
   text-align: left;
-  margin-left: 30%;
 }
 
 .happycheck {
@@ -907,7 +918,7 @@ input[type="checkbox"]:checked {
 .journal-title {
   color: orange;
 
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 50px;
   margin-bottom: -1px;
 
@@ -962,8 +973,8 @@ input[type="checkbox"]:checked {
 }
 
 .skilldiv {
+  background: rgba(43, 78, 131, 0.445);
   color: rgb(0, 0, 0);
-  background: transparent;
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
@@ -983,7 +994,7 @@ input[type="checkbox"]:checked {
   border-width: 2px;
   border-radius: 10px;
   /* ----Fast ScaleBox--- */
-  transform: scale(1.1);
+  transform: scale(1.02);
   transition: all ease 200ms;
   background: rgb(0, 0, 0);
   box-shadow: 0 0 25px #000;
@@ -1063,7 +1074,7 @@ input[type="checkbox"]:checked {
 
 .skill-status {
   color: white;
-  margin-bottom: 0px;
+  margin: 0;
 }
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
 
