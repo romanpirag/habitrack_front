@@ -16,7 +16,6 @@ class SkillSelect extends React.Component {
 
   getSkillsData = () => {
     fetch(`https://habitrack-backend.herokuapp.com/api/v1/skills`, {
-      // fetch(`https://habitrack-backend.herokuapp.com/api/v1/user/${this.props.user.id}/skills`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -48,6 +47,7 @@ class SkillSelect extends React.Component {
         <div className="page-title">
           <h3 className="your-daily-habits">Choose your Daily Habits</h3>
         </div>
+
         <div className="skillselect-container">
           <div>
             <Skillform
@@ -55,10 +55,12 @@ class SkillSelect extends React.Component {
               updateSkills={this.updateSkills}
             />
           </div>
+
           <div className="skillselect-flexchild">
             <SkillList skills={this.state.skills} />
             <Routine />
           </div>
+          
         </div>
       </>
     )

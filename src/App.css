@@ -85,7 +85,7 @@ button:hover,
 .fancy-button:visited {
   border-radius: 10px;
   background: black;
-  font-size: 50px;
+  font-size: 1.5rem;
   color: rgb(0, 225, 255);
 
   height: 70px;
@@ -149,7 +149,7 @@ input[type="password"] {
   border-radius: 10px;
   width: 110px;
   height: 37px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   margin: 5px auto;
@@ -203,7 +203,7 @@ header {
 
 @media (min-height: 500px) {
   header {
-    height: 12%;
+    height: 8%;
   }
 }
 
@@ -229,8 +229,7 @@ header {
   z-index: 2;
 }
 
-.maintitle-div,
-.user-info {
+.maintitle-div {
   display: flex;
   padding: 15px;
 }
@@ -264,8 +263,8 @@ header {
 }
 
 .user-info {
-  margin-right: 20px;
-  text-align: right;
+  display: flex;
+  padding: 5px;
 }
 
 .welcomename,
@@ -279,7 +278,7 @@ header {
   /* cursor: pointer; */
   cursor: default;
   color: rgb(255, 222, 180);
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   text-align: right;
   font-weight: bold;
 }
@@ -312,6 +311,7 @@ header {
   margin-left: 16px;
   padding: 6px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 @media (min-width: 600px) {
@@ -396,8 +396,10 @@ header {
 }
 
 .app-header {
-  text-align: left;
+  display: flex; 
+  justify-content: flex-end;
   box-shadow: 0px 5px 10px #000000;
+  padding: 5px;
 
   color: #f35626;
   -webkit-animation: hue 4s infinite linear;
@@ -542,7 +544,7 @@ main {
 /* SHARED */
 
 .page-title {
-  margin-bottom: 10px;
+ margin-top: -140px;
 }
 
 /* LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN---LOGIN------------ */
@@ -653,8 +655,9 @@ main {
 
 
 .your-daily-habits {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
+  margin-top: 0;
   color: rgb(255, 196, 107);
 
   -webkit-animation: glow-orange 1s ease-in-out infinite alternate;
@@ -711,7 +714,7 @@ main {
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   border-radius: 10px;
-  font-size: 38px;
+
   height: 38px;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -723,7 +726,7 @@ main {
   border-radius: 10px;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 2rem;
   /* width: 60px;
   height: 50px; */
   margin-top: 20px;
@@ -739,7 +742,7 @@ main {
 }
 
 input[type="text"] {
-  width: 350px;
+  width: 300px;
 }
 
 input[type="checkbox"] {
@@ -770,7 +773,7 @@ input[type="checkbox"]:checked {
 }
 
 .addbutton {
-  width: 13%;
+  width: 80%;
   height: 8%;
   border-radius: 10px;
   padding: -5px;
@@ -799,7 +802,7 @@ input[type="checkbox"]:checked {
 
 .skillform-titles {
   color: rgb(0, 247, 255);
-  font-size: 50px;
+  font-size: 2rem;
   margin: 0;
 
   -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -825,6 +828,16 @@ input[type="checkbox"]:checked {
 }
 
 /* -----------------MAIN PAGE------------------------------------------- */
+
+.skillselect-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+
+
 
 .skilllist-end {
   font-size: 2rem;
@@ -948,11 +961,10 @@ input[type="checkbox"]:checked {
 }
 
 .skilldiv2 {
-  width: 30%;
+  /* width: 30%; */
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
-  margin-left: 35%;
   padding: 10px;
 }
 
@@ -980,7 +992,7 @@ input[type="checkbox"]:checked {
   border-radius: 10px;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 1.5rem;
   width: 300px;
   height: 70px;
   margin-top: 40px;
@@ -991,7 +1003,7 @@ input[type="checkbox"]:checked {
 }
 
 .create-routine-button {
-  width: 20%;
+  width: 80%;
   height: 10%;
 }
 
