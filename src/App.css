@@ -148,7 +148,7 @@ input[type="password"] {
   border-radius: 10px;
   width: 110px;
   height: 37px;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   margin: 5px auto;
@@ -157,7 +157,7 @@ input[type="password"] {
 @media (min-width: 500px) {
   input[type="text"],
   input[type="password"] {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -172,13 +172,14 @@ textarea {
   border: 1px solid transparent;
   border-radius: 10px;
   color: white;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-family: "Amatic SC", cursive;
   width: 100%;
   height: 200px;
   font-weight: 700;
   resize: none;
   outline: none;
+  padding: 10px;
 }
 
 @media (min-width: 700px) {
@@ -404,20 +405,20 @@ header {
 main {
   margin: 10px;
   margin-bottom: 3%;
-  margin-top: 80px;
+  margin-top: 300px;
 }
 
-@media (min-height: 500px) {
+@media (min-width: 500px) {
   main {
     margin: 10px;
     margin-bottom: 3%;
-    margin-top: 200px;
+    margin-top: 300px;
   }
 }
 
 @media (min-width: 770px) {
   main {
-    margin-top: 150px;
+    margin-top: 200px;
   }
 }
 
@@ -576,8 +577,8 @@ main {
   color: rgb(0, 225, 255);
   border-radius: 10px;
   height: 40px;
-  font-size: 160%;
-  margin: 10px;
+  font-size: 1.4rem;
+  margin: 4px;
 
   font-family: "Amatic SC", cursive;
   font-weight: 700;
@@ -587,8 +588,9 @@ main {
 
 @media (min-width: 500px) {
   .logsubmit {
-    height: 50px;
-    font-size: 200%;
+    width: 60px;
+    height: 40px;
+    font-size: 1.4rem;
   }
 }
 
@@ -602,8 +604,9 @@ main {
   }
 }
 
+
 .dayinfo-all {
-  margin-top: 80px;
+  margin-top: -230px;
 
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -612,16 +615,28 @@ main {
   cursor: default;
 }
 
+@media (min-width: 770px) {
+  .dayinfo-all {
+  margin-top: -130px;
+}
+}
+
 #logname {
-  width: 100px;
+  width: 80px;
   margin: 5px;
 }
 
 #logpass {
-  width: 100px;
-  margin: 5px;
+  width: 80px;
 }
 
+@media (min-width: 470px) {
+  #logname,
+  #logpass {
+    width: 120px;
+    margin: 5px;
+  }
+}
 @media (min-width: 770px) {
   #logname,
   #logpass {
@@ -636,7 +651,8 @@ main {
   font-size: 4rem;
   margin-bottom: 15px;
   color: rgb(0, 247, 255);
-  margin-top: 250px;
+  margin-top: -220px;
+  margin-bottom: 30px;
 
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -973,6 +989,9 @@ input[type="checkbox"]:checked {
 }
 
 .skilldiv {
+  width: 400px;
+  height: 400px;
+
   background: rgba(43, 78, 131, 0.445);
   color: rgb(0, 0, 0);
   border-style: solid;
